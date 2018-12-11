@@ -1,0 +1,20 @@
+{
+  "items": [
+    {
+      "title": "Fast Company Q&amp;A with Robin Richards",
+      "slug": "fast-company-q-a-with-robin-richards",
+      "postDate": "2016-05-03 00:00:00",
+      "featuredImage": "news-link-1-image.jpg",
+      "shortDescription": "\u003Cp\u003EThe path to what I'm doing started with not knowing what I wanted to do. I had to make a decision about what I wanted to do as I was graduating college, and I could not figure it out. I majored in English because I couldn't figure out how to express my love of...\u003C\/p\u003E",
+      "linkUrl": "http://buildwithcraft.com"
+    },
+    {
+      "title": "Photography Folio featured on AWWWARDS.com",
+      "slug": "photography-folio-featured-on-awwwards-com",
+      "postDate": "2016-05-02 00:00:00",
+      "featuredImage": "news-link-2-image.jpg",
+      "shortDescription": "\u003Cp\u003EWhat a well developed site. I really enjoy the design and the attention to details and performance: great use of video and animations (with CSS3 and JS); categories section with so many images and video had a very good scroll frame rate...\u003C\/p\u003E",
+      "linkUrl": "http://buildwithcraft.com"
+    }
+  ]
+}
