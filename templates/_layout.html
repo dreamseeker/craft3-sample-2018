@@ -1,0 +1,33 @@
+{#
+ # テンプレート：サイト共通レイアウト
+ # -----------------------
+ #
+ #}
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  {# seoMeta ブロック #}
+  {% block seoMeta %}
+    <title>{% if metaTitle is defined %}{{ metaTitle }} | {% endif %}{{ siteName }}</title>
+  {% endblock %}
+
+  <link rel="stylesheet" type="text/css" href="/assets/fonts/stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="/assets/css/happylager.css">
+</head>
+<body class="homepage">
+  {# 共通ヘッダーのインクルード #}
+  {% include '_partials/header' %}
+
+  <main id="main" role="main">
+    {# main ブロック #}
+    {% block main %}{% endblock %}
+  </main><!-- /#main -->
+
+  {# 共通フッターのインクルード #}
+  {% include '_partials/footer' %}
+</body>
+</html>
