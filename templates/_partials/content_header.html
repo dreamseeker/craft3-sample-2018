@@ -7,6 +7,9 @@
 {# ------------------------------------------
 変数など
 --------------------------------------------- #}
+{# 「メイン画像」の取得 #}
+{% set image = entry.featuredImage.one() %}
+
 
 {# ------------------------------------------
 出力
@@ -14,11 +17,14 @@
 <header class="alt2">
   <div class="flex">
     <div class="g1-flex4 g2-flex6 g3-flex12">
-      <h1 class="alpha center reverse">Barrel Aged Digital Natives</h1>
+      <h1 class="alpha center reverse">{{ entry.title }}</h1>
     </div>
   </div><!-- /.flex -->
 </header><!-- /.alt2 -->
 
-<section>
-  <img class="contain-media" src="https://placehold.jp/3d4070/42598f/1440x360.png" alt="water-barley-hops">
-</section><!-- /section -->
+{# 「メイン画像」がセットされている場合のみ出力 #}
+{% if image %}
+  <section>
+    <img class="contain-media" src="{{ image.getUrl({ width: 1440, height: 360 }) }}" alt="{{ image.title }}">
+  </section>
+{% endif %}
