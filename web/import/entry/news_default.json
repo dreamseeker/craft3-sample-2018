@@ -19,16 +19,16 @@
           },
           {
             "text_text": "テキスト",
-            "text_positoin": "center"
+            "text_position": "center"
           },
           {
             "pullQuote_pullQuote": "リード文",
-            "pullQuote_positoin": "left"
+            "pullQuote_position": "left"
           },
           {
             "image_image": "awesome-cities.jpg",
             "image_caption": "キャプション",
-            "image_positoin": "right"
+            "image_position": "right"
           },
           {
             "gallery_images": [
@@ -40,7 +40,7 @@
           {
             "quote_quote": "引用",
             "quote_attribution": "帰属",
-            "quote_positoin": "center"
+            "quote_position": "center"
           }
         ]
       }
@@ -58,16 +58,16 @@
         "articleBody": [
           {
             "text_text": "\u003Cp\u003E\n\t\u003Cstrong\u003EEt iusto odio dignissimos ducimus qui blanditii raesentium\u003C\/strong\u003E voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut.\n\u003C\/p\u003E\n\u003Cp\u003E\n\tNam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis. Nam libero tempore, cum soluta nobis est.\n\u003C\/p\u003E",
-            "text_positoin": "center"
+            "text_position": "center"
           },
           {
             "pullQuote_pullQuote": "Using sophisticated global positioning technology, Happy Lager extracted Health data straight from the air we breathe.",
-            "pullQuote_positoin": "left"
+            "pullQuote_position": "left"
           },
           {
             "image_image": "video.jpg",
             "image_caption": "",
-            "image_positoin": "right"
+            "image_position": "right"
           },
           {
             "heading_heading": "A People-to-People Business"
@@ -75,35 +75,35 @@
           {
             "image_image": "awesome-cities.jpg",
             "image_caption": "",
-            "image_positoin": "left"
+            "image_position": "left"
           },
           {
             "text_text": "\u003Cp\u003E\n\tNam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut. Libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Deserunt mollitia animi, id est laborum Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.\n\u003C\/p\u003E\n\u003Cp\u003E\n\tTemporibus autem quibusdam et aut officiis debitis aut. Libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem Tempore cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut. Libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.\n\u003C\/p\u003E",
-            "text_positoin": "center"
+            "text_position": "center"
           },
           {
             "quote_quote": "Augmented reality has long sounded like a wild futuristic concept, but the technology has actually been around for years.",
             "quote_attribution": "Charlie Roths, Developers.Google",
-            "quote_positoin": "center"
+            "quote_position": "center"
           },
           {
             "heading_heading": "What is Happy Lager Doing About It?"
           },
           {
             "text_text": "\u003Cp\u003E\n\tVero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.\n\u003C\/p\u003E\n\u003Cp\u003E\n\tTemporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.\n\u003C\/p\u003E\n\u003Cp\u003E\n\tAt vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.\n\u003C\/p\u003E",
-            "text_positoin": "center"
+            "text_position": "center"
           },
           {
             "image_image": "augmented-reality-icons.png",
             "image_caption": "",
-            "image_positoin": "full"
+            "image_position": "full"
           },
           {
             "heading_heading": "This is Only the Beginning"
           },
           {
             "text_text": "\u003Cp\u003E\n\tVero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.\n\u003C\/p\u003E",
-            "text_positoin": "center"
+            "text_position": "center"
           }
         ]
       }
@@ -121,42 +121,42 @@
         "articleBody": [
           {
             "text_text": "\u003Cp\u003E\r\n\t\u003Cstrong\u003EOur answer is: both.\u003C\/strong\u003E Et iusto odio dignissimos ducimus qui blanditii raesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut.\r\n\u003C\/p\u003E\r\n\r\n\u003Cp\u003E\r\n\tNam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.\r\n\u003C\/p\u003E",
-            "text_positoin": "center"
+            "text_position": "center"
           },
           {
             "pullQuote_pullQuote": "Whenever something made me uncomfortable, I would give it a try. So I moved around a bit, trying new things out.",
-            "pullQuote_positoin": "left"
+            "pullQuote_position": "left"
           },
           {
             "image_image": "laptop-desk.jpg",
             "image_caption": "",
-            "image_positoin": "right"
+            "image_position": "right"
           },
           {
             "heading_heading": "The Experience"
           },
           {
             "text_text": "\u003Cp\u003E\r\n\tVero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.\r\n\u003C\/p\u003E\r\n\r\n\u003Cul\u003E\r\n\t\u003Cli\u003EOptio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.\u003C\/li\u003E\r\n\t\u003Cli\u003ETemporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.\u003C\/li\u003E\r\n\t\u003Cli\u003EItaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.\u003C\/li\u003E\r\n\u003C\/ul\u003E",
-            "text_positoin": "center"
+            "text_position": "center"
           },
           {
             "heading_heading": "The Skills"
           },
           {
             "text_text": "\u003Cp\u003E\r\n\tEt harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut.\r\n\u003C\/p\u003E\r\n\r\n\u003Col\u003E\r\n\t\u003Cli\u003EOptio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.\u003C\/li\u003E\r\n\t\u003Cli\u003ETemporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.\u003C\/li\u003E\r\n\t\u003Cli\u003EItaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.\u003C\/li\u003E\r\n\u003C\/ol\u003E\r\n\r\n\u003Cp\u003E\r\n\tOfficiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.\r\n\u003C\/p\u003E",
-            "text_positoin": "center"
+            "text_position": "center"
           },
           {
             "image_image": "coffee-shop.jpg",
             "image_caption": "",
-            "image_positoin": "full"
+            "image_position": "full"
           },
           {
             "heading_heading": "In the End"
           },
           {
             "text_text": "\u003Cp\u003E\r\n\tVero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.\r\n\u003C\/p\u003E",
-            "text_positoin": "center"
+            "text_position": "center"
           }
         ]
       }
@@ -174,7 +174,7 @@
         "articleBody": [
           {
             "text_text": "\u003Cp\u003E\r\n\t\u003Cstrong\u003EEt iusto odio dignissimos ducimus qui blanditii raesentium\u003C\/strong\u003E voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut.\r\n\u003C\/p\u003E\r\n\r\n\u003Cp\u003E\r\n\tNam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis. Nam libero tempore, cum soluta nobis est.\r\n\u003C\/p\u003E",
-            "text_positoin": "center"
+            "text_position": "center"
           },
           {
             "gallery_images": [
@@ -188,30 +188,30 @@
           },
           {
             "text_text": "\u003Cp\u003E\r\n\tNam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut.  Libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. Deserunt mollitia animi, id est laborum\r\n\u003C\/p\u003E",
-            "text_positoin": "center"
+            "text_position": "center"
           },
           {
             "image_image": "pong.png",
             "image_caption": "",
-            "image_positoin": "full"
+            "image_position": "full"
           },
           {
             "heading_heading": "In the Beginning, There Was Pong"
           },
           {
             "text_text": "\u003Cp\u003E\r\n\tVero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.\r\n\u003C\/p\u003E\r\n\r\n\u003Cp\u003E\r\n\tTemporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.\r\n\u003C\/p\u003E\r\n\r\n\u003Cp\u003E\r\n\tAt vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.\r\n\u003C\/p\u003E",
-            "text_positoin": "center"
+            "text_position": "center"
           },
           {
             "pullQuote_pullQuote": "People learn and adapt 36% faster in the environment of play",
-            "pullQuote_positoin": "center"
+            "pullQuote_position": "center"
           },
           {
             "heading_heading": "Results of our Play"
           },
           {
             "text_text": "\u003Cp\u003E\r\n\tVero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.\r\n\u003C\/p\u003E",
-            "text_positoin": "center"
+            "text_position": "center"
           }
         ]
       }
@@ -229,48 +229,48 @@
         "articleBody": [
           {
             "text_text": "\u003Cp\u003E\r\n\tIusto odio dignissimos ducimus qui blanditii raesentium voluptatum deleniti atque corrupti quos dolores et as molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo mus quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut.\r\n\u003C\/p\u003E",
-            "text_positoin": "center"
+            "text_position": "center"
           },
           {
             "image_image": "macbook.jpg",
             "image_caption": "",
-            "image_positoin": "right"
+            "image_position": "right"
           },
           {
             "text_text": "\u003Cp\u003E\r\n\tNam libero tempore, cum soluta nobis est eligdi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. empobus autem quibusdam et aut officiis debis aut.\r\n\u003C\/p\u003E\r\n\r\n\u003Cp\u003E\r\n\tTamlibero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debis aut rerum ssitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. ero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in cpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.\r\n\u003C\/p\u003E",
-            "text_positoin": "center"
+            "text_position": "center"
           },
           {
             "image_image": "gallery.png",
             "image_caption": "",
-            "image_positoin": "full"
+            "image_position": "full"
           },
           {
             "heading_heading": "Outstanding Content Flow"
           },
           {
             "text_text": "\u003Cp\u003E\r\n\tEt harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat ero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos\r\n\u003C\/p\u003E",
-            "text_positoin": "center"
+            "text_position": "center"
           },
           {
             "pullQuote_pullQuote": "Sooner or later you’re going to realize, just as I did, that there’s a difference between knowing the path and walking the path.",
-            "pullQuote_positoin": "left"
+            "pullQuote_position": "left"
           },
           {
             "text_text": "\u003Cp\u003E\r\n\tFacere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non cusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. At vero eos et accusamus et iusto odio dignissimos ducimus qui landitiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occae cupiditate harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.\r\n\u003C\/p\u003E",
-            "text_positoin": "center"
+            "text_position": "center"
           },
           {
             "image_image": "bar.jpg",
             "image_caption": "",
-            "image_positoin": "center"
+            "image_position": "center"
           },
           {
             "heading_heading": "Say what you want, where you want to say it"
           },
           {
             "text_text": "\u003Cp\u003E\r\n\tEt harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat ero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.\r\n\u003C\/p\u003E",
-            "text_positoin": "center"
+            "text_position": "center"
           }
         ]
       }
@@ -288,7 +288,7 @@
         "articleBody": [
           {
             "text_text": "\u003Cp\u003E\r\n\tVero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum. deleniti atque corrupti quos dolores. Et harum quidem rerm facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime.\r\n\u003C\/p\u003E\r\n\r\n\u003Cp\u003E\r\n\tVero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum. deleniti atque corrupti quos dolores. Et harum quidem rerm facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime.\r\n\u003C\/p\u003E\r\n\r\n\r\n\r\n\r\n\r\n\u003Cp\u003E\r\n\tVero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum. deleniti atque corrupti quos dolores. Et harum quidem rerm facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime.\r\n\u003C\/p\u003E",
-            "text_positoin": "center"
+            "text_position": "center"
           }
         ]
       }
