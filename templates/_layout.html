@@ -3,6 +3,19 @@
  # -----------------------
  #
  #}
+
+{# ------------------------------------------
+変数など
+--------------------------------------------- #}
+{# body のクラス #}
+{% if bodyClass is not defined %}
+  {% set bodyClass = craft.app.request.segments | first %}
+{% endif %}
+
+
+{# ------------------------------------------
+出力
+--------------------------------------------- #}
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
 <head>
@@ -18,7 +31,7 @@
   <link rel="stylesheet" type="text/css" href="/assets/fonts/stylesheet.css">
   <link rel="stylesheet" type="text/css" href="/assets/css/happylager.css">
 </head>
-<body class="homepage">
+<body{% if bodyClass is defined %} class="{{ bodyClass }}"{% endif %}>
   {# 共通ヘッダーのインクルード #}
   {% include '_partials/header' %}
 

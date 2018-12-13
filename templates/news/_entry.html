@@ -7,9 +7,30 @@
 {# ------------------------------------------
 変数など
 --------------------------------------------- #}
+{# meta タイトル #}
+{% set metaTitle = entry.title ~ ' | ニュース' %}
 
 {# ------------------------------------------
 出力
 --------------------------------------------- #}
 {# ベースレイアウトを extends #}
 {% extends '_layout' %}
+
+{# main ブロック #}
+{% block main %}
+  <article>
+    {# 「コンテンツヘッダー」モジュールを読み込み #}
+    {% include "_partials/content_header" %}
+    {# 「article 見出し」モジュールを読み込み #}
+    {% include "_partials/article_heading" %}
+    {# 「article 本文」モジュールを読み込み #}
+    {% include "_partials/article_body" %}
+  </article><!-- /article -->
+  <footer class="authorinfo">
+    <div class="flex">
+      <div class="g1-flex4 g2-flex6 g3-flex12">
+        <p class="center author">{{ entry.author.name }}</p>
+      </div>
+    </div><!-- /.flex -->
+  </footer><!-- /.authorinfo -->
+{% endblock %}
