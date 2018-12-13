@@ -22,27 +22,66 @@
     {% switch block.type.handle %}
       {# 「新しいセクション」ブロック #}
       {% case 'newSection' %}
+        <hr class="horz-rule">
+        <h1 class="beta center">{{ block.sectionHeading }}</h1>
 
       {# 「見出し」ブロック #}
       {% case 'heading' %}
+        <h2 class="delta center subfont caps">{{ block.heading }}</h2>
 
       {# 「テキスト」ブロック #}
       {% case 'text' %}
+        {{ block.text }}
 
       {# 「リード文」ブロック #}
       {% case 'pullQuote' %}
+        <div class="pullquote">
+          <p class="delta center subfont caps">{{ block.pullQuote }}</p>
+        </div>
 
       {# 「画像」ブロック #}
       {% case 'image' %}
+        {# 「画像」フィールドを取得 #}
+        {% set image = block.image.one() %}
+        {# 「画像」がセットされている場合のみ出力 #}
+        {% if image %}
+          {% if block.position == 'full' %}
+            {# サムネイル画像のパラメータをセット #}
+            {% set transformParams = { width: 1440, height: 480 } %}
+          {% elseif block.position == 'center' %}
+            {# サムネイル画像のパラメータをセット #}
+            {% set transformParams = { width: 600 } %}
+          {% else %}
+            {# サムネイル画像のパラメータをセット #}
+            {% set transformParams = { width: 360 } %}
+          {% endif %}
+          <p><img{% if block.position == 'full' %} class="contain-media"{% endif %} src="{{ image.getUrl(transformParams) }}" alt="{{ image.title }}"></p>
+        {% endif %}
 
       {# 「ギャラリー」ブロック #}
       {% case 'gallery' %}
+        {# 「画像」がセットされていればループ処理 #}
+        {% for image in block.images.all() %}
+          <div class="g1-flex4 g2-flex2 g3-flex4">
+            <img src="{{ image.getUrl('small') }}" alt="{{ image.title }}">
+            {{ image.shortDescription }}
+          </div>
+        {% endfor %}
 
       {# 「引用」ブロック #}
       {% case 'quote' %}
+        <blockquote class="blockquote">
+          <div class="flex">
+            <p>{{ block.quote }}</p>
+
+            {# 「帰属」に入力値がある場合のみ出力 #}
+            {% if block.attribution %}
+              <footer>– <cite>{{ block.attribution }}</cite></footer>
+            {% endif %}
+          </div>
+        </blockquote>
 
     {% endswitch %}
 
   </div>
 {% endfor %}
-
