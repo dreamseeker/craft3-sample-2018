@@ -7,19 +7,79 @@
 {# ------------------------------------------
 変数など
 --------------------------------------------- #}
+{# 「位置」フィールドで選択された値、または、デフォルト値を返す macro の定義 #}
+{% macro getPosition(block) %}
+  {%- spaceless %}
+    {# 「位置」フィールドを持つブロックのハンドルを配列にセット #}
+    {% set positionedTypes = ['text', 'pullQuote', 'image', 'quote'] %}
+    {# ブロックのハンドルが配列 positionedTypes に含まれ、かつ、「位置」フィールドがセットされていれば選択値、それ以外はデフォルト値を出力 #}
+    {{ block.type.handle in positionedTypes and block.position ? block.position : 'center' }}
+  {% endspaceless -%}
+{% endmacro %}
+
+{# macro の読み込み #}
+{% from _self import getPosition %}
+
 {# 「記事本文」フィールドのブロックを変数にセット #}
 {% set blocks = entry.articleBody %}
+
+{# 直前の「ブロックタイプ」 #}
+{% set prevType = null %}
+{# 直前の「位置」 #}
+{% set prevPosition = null %}
+{# 次の「ブロックタイプ」 #}
+{% set nextType = null %}
+{# 次の「位置」 #}
+{% set nextPosition = null %}
+{# 直前のブロックで div タグが閉じられているかどうかのフラグ #}
+{% set closedLastRow = true %}
 
 
 {# ------------------------------------------
 出力
 --------------------------------------------- #}
 {# ブロックのループ処理 #}
-{% for block in blocks.all() %}
-  <div class="flex">
+{% for i, block in blocks.all() %}
+  {# 現在の「ブロックタイプ」をセット #}
+  {% set type = block.type.handle %}
+  {# 現在の「位置」をセット #}
+  {% set position = getPosition(block) ~ '' %}
+
+  {# 次の「ブロックタイプ」をセット #}
+  {% set nextType = (not loop.last ? blocks[i+1].type.handle) %}
+  {# 次の「位置」をセット #}
+  {% set nextPosition = (not loop.last ? getPosition(blocks[i+1]) ~ '') %}
+
+  {# 「位置」が `left` または `right` に含まれる場合、isFloat フラグは 1 #}
+  {% set isFloat = position in ['left', 'right'] %}
+
+  {# isFloat フラグがtrue、かつ、「リード文」または「画像」ブロック、かつ、現在の「位置」が `left` または 直前の「位置」が `left` ではない、かつ、次の「位置」が `center` なら、div.flex の外側まで画像を表示するための isBreakout フラグは 1 #}
+  {% set isBreakout = (
+    isFloat and
+    type in ['pullQuote', 'image'] and
+    (position == 'left' or prevPosition != 'left') and
+    nextPosition == 'center'
+  ) %}
+
+  {# 「位置」が `full` なら専用の div を出力 #}
+  {% if position == 'full' %}
+    <div class="flex flex-full">
+  {# 直前のブロックで div タグが閉じられている場合のみ、出力 #}
+  {% elseif closedLastRow %}
+    <div class="flex">
+      {# 「ギャラリー」または「引用」ブロックでなければ出力 #}
+      {% if type not in ['gallery', 'quote'] %}
+        <div class="g1-flex4 g2-flex6{% if (type == 'image' and position == 'center') %} g3-flex8 g3-offset2{% else %} g3-flex10 g3-offset1{% endif %}">
+      {% endif %}
+  {% endif %}
+
+  {# 変数 isFloat が true なら出力 #}
+  {% if isFloat %}
+    <div class="g1-flex4 g2-flex6 g3-flex6 flex-nested{% if isBreakout %} breakout{% endif %}{% if position == 'right' %} push{% endif %}">
+  {% endif %}
 
     {# block.type.handle の値に応じて switch 文で分岐処理 #}
-    {% switch block.type.handle %}
+    {% switch type %}
       {# 「新しいセクション」ブロック #}
       {% case 'newSection' %}
         <hr class="horz-rule">
@@ -83,5 +143,40 @@
 
     {% endswitch %}
 
-  </div>
+  {# 変数 isFloat が true なら出力 #}
+  {% if isFloat %}
+    </div>
+  {% endif %}
+
+  {# 現在の「位置」が `left` かつ 次の「位置」が `right`、もしくは、isBreakout が true #}
+  {% if not (
+    (position == 'left' and nextPosition == 'right') or
+    isBreakout
+  ) %}
+      {# 「位置」が `full` ではない、かつ、「ギャラリー」または「引用」ブロックでなければ出力 #}
+      {% if position != 'full' and type not in ['gallery', 'quote'] %}
+        </div>
+      {% endif %}
+    </div>
+
+    {# div タグを閉じているのでフラグは true #}
+    {% set closedLastRow = true %}
+  {% else %}
+    {# div タグを閉じていないのでフラグは false #}
+    {% set closedLastRow = false %}
+  {% endif %}
+
+  {# 「ブロックタイプ」が `heading`、かつ、ループの最初ではない、かつ、直前の「ブロックタイプ」が `newSection` なら、水平線を出力 #}
+  {% if type == 'heading' and not loop.first and prevType == 'newSection' %}
+    <div class="flex">
+      <div class="g1-flex4 g2-flex6 g3-flex10 g3-offset1">
+        <hr class="horz-rule">
+      </div>
+    </div>
+  {% endif %}
+
+  {# 直前の「ブロックタイプ」としてセット #}
+  {% set prevType = type %}
+  {# 直前の「位置」としてセット #}
+  {% set prevPosition = position %}
 {% endfor %}
