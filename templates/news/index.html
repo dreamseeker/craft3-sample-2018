@@ -20,7 +20,8 @@
 {# 「ニュース」セクションのエントリを取得 #}
 {% set newsEntries = craft.entries({
   section: 'news',
-  orderBy: 'postDate desc'
+  orderBy: 'postDate desc',
+  id: (featuredEntry ? 'not ' ~ featuredEntry.id : null)
 }) %}
 
 
