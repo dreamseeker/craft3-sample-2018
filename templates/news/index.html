@@ -10,6 +10,20 @@
 {# meta タイトル #}
 {% set metaTitle = 'ニュース' %}
 
+{# 「固定表示フラグ」が ON の最新エントリを取得 #}
+{% set featuredEntry = craft.entries({
+  section: 'news',
+  featuredEntry: 1,
+  orderBy: 'postDate desc'
+}).one() %}
+
+{# 「ニュース」セクションのエントリを取得 #}
+{% set newsEntries = craft.entries({
+  section: 'news',
+  orderBy: 'postDate desc',
+  id: (featuredEntry ? 'not ' ~ featuredEntry.id : null)
+}) %}
+
 
 {# ------------------------------------------
 出力
@@ -19,4 +33,80 @@
 
 {# main ブロック #}
 {% block main %}
+  <header class="alt2">
+    <div class="flex">
+      <div class="g1-flex4 g2-flex6 g3-flex12">
+        <h1 class="alpha center reverse">Brew News</h1>
+      </div>
+    </div><!-- /.flex -->
+  </header><!-- /.alt2 -->
+  <div class="flex">
+
+    {# 「固定表示フラグ」が ON の最新エントリ #}
+    {% if featuredEntry %}
+      {# 「メイン画像」を取得 #}
+      {% set image = featuredEntry.featuredImage.one() %}
+
+      <article class="featured news-entry">
+        {# 「メイン画像」がセットされていれば、出力 #}
+        {% if image %}
+          <figure>
+            <a href="{{ featuredEntry.url }}">
+              <img src="{{ image.url }}" alt="{{ image.title }}" width="570" height="348">
+            </a>
+          </figure>
+        {% endif %}
+        <div class="summary-wrap">
+          <h3><a href="{{ featuredEntry.url }}">{{ featuredEntry.title }}</a></h3>
+          <span class="author">{{ featuredEntry.author.name }}</span>
+          {{ featuredEntry.shortDescription }}
+          <p>
+            <a href="{{ featuredEntry.url }}" class="more-link">Read More</a>
+          </p>
+        </div><!-- /.summary-wrap -->
+      </article><!-- /.featured.news-entry -->
+    {% endif %}
+
+    {# 「ニュース」エントリの一覧 #}
+    {% for entry in newsEntries.all() %}
+      {# 「メイン画像」を取得 #}
+      {% set image = entry.featuredImage.one() %}
+
+      <article class="news-entry">
+        {# 「メイン画像」がセットされていれば、出力 #}
+        {% if image %}
+          <figure>
+            <a href="{{ entry.url }}">
+              <img src="{{ image.getUrl('thumb') }}" alt="{{ image.title }}" width="570" height="348">
+            </a>
+          </figure>
+        {% endif %}
+        <div class="summary-wrap">
+          <h3><a href="{{ entry.url }}">{{ entry.title }}</a></h3>
+          {{ entry.shortDescription }}
+          <p>
+            {% if entry.type == 'link' %}
+              {# 「リンク」入力タイプの場合 #}
+              <a href="{{ entry.url }}" class="more-link">Check it out</a>
+            {% else %}
+              {# 「デフォルト」入力タイプの場合 #}
+              <span class="author">{{ entry.author.name }}</span>
+              <span class="separator">|</span>
+              <a href="{{ entry.url }}" class="more-link">Read More</a>
+            {% endif %}
+          </p>
+        </div><!-- /.summary-wrap -->
+      </article><!-- /.news-entry -->
+    {% endfor %}
+
+    {# ページナビゲーション #}
+    <hr class="horz-rule">
+    <div class="pagination">
+      <ul>
+        <li class="current">1</li>
+        <li><a href="../news/p2">2</a></li>
+        <li><a href="../news/p2" class="pag-next-link">Next Page</a></li>
+      </ul>
+    </div><!-- /.pagination -->
+  </div><!-- /.flex -->
 {% endblock %}
