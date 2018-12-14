@@ -17,13 +17,6 @@
   orderBy: 'postDate desc'
 }).one() %}
 
-{# 「ニュース」セクションのエントリを取得 #}
-{% set newsEntries = craft.entries({
-  section: 'news',
-  orderBy: 'postDate desc',
-  id: (featuredEntry ? 'not ' ~ featuredEntry.id : null)
-}) %}
-
 
 {# ------------------------------------------
 出力
@@ -68,36 +61,24 @@
     {% endif %}
 
     {# 「ニュース」エントリの一覧 #}
-    {% for entry in newsEntries %}
-      {# 「メイン画像」を取得 #}
-      {% set image = entry.featuredImage.one() %}
-
-      <article class="news-entry">
-        {# 「メイン画像」がセットされていれば、出力 #}
-        {% if image %}
-          <figure>
-            <a href="{{ entry.url }}">
-              <img src="{{ image.getUrl('thumb') }}" alt="{{ image.title }}" width="570" height="348">
-            </a>
-          </figure>
-        {% endif %}
-        <div class="summary-wrap">
-          <h3><a href="{{ entry.url }}">{{ entry.title }}</a></h3>
-          {{ entry.shortDescription }}
-          <p>
-            {% if entry.type == 'link' %}
-              {# 「リンク」入力タイプの場合 #}
-              <a href="{{ entry.url }}" class="more-link">Check it out</a>
-            {% else %}
-              {# 「デフォルト」入力タイプの場合 #}
-              <span class="author">{{ entry.author.name }}</span>
-              <span class="separator">|</span>
-              <a href="{{ entry.url }}" class="more-link">Read More</a>
-            {% endif %}
-          </p>
-        </div><!-- /.summary-wrap -->
-      </article><!-- /.news-entry -->
-    {% endfor %}
+    <article class="news-entry">
+      <figure>
+        <a href="../news/detail.html">
+          <img src="https://placehold.jp/3d4070/42598f/280x204.png" alt="augmented-reality" width="280" height="204">
+        </a>
+      </figure>
+      <div class="summary-wrap">
+        <h3><a href="../news/the-future-of-augmented-reality">The Future of Augmented Reality</a></h3>
+        <p>
+          Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis.
+        </p>
+        <p>
+          <span class="author"></span>
+          <span class="separator">|</span>
+          <a href="../news/detail.html" class="more-link">Read More</a>
+        </p>
+      </div><!-- /.summary-wrap -->
+    </article><!-- /.news-entry -->
 
     {# ページナビゲーション #}
     <hr class="horz-rule">
