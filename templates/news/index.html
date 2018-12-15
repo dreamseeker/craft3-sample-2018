@@ -45,8 +45,8 @@
   </header><!-- /.alt2 -->
   <div class="flex">
 
-    {# 「固定表示フラグ」が ON の最新エントリ #}
-    {% if featuredEntry %}
+    {# 「固定表示フラグ」が ON の最新エントリが存在する、かつ、最初のページのみ #}
+    {% if featuredEntry and pageInfo.currentPage == 1 %}
       {# 「メイン画像」を取得 #}
       {% set image = featuredEntry.featuredImage.one() %}
 
