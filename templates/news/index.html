@@ -106,9 +106,30 @@
     <hr class="horz-rule">
     <div class="pagination">
       <ul>
-        <li class="current">1</li>
-        <li><a href="../news/p2">2</a></li>
-        <li><a href="../news/p2" class="pag-next-link">Next Page</a></li>
+
+        {# 前のページがあれば出力 #}
+        {% if pageInfo.prevUrl %}
+          <li><a href="{{ pageInfo.prevUrl }}" class="pag-prev-link">Previous Page</a></li>
+        {% endif %}
+
+        {# 前のページがあれば、最大5ページまで出力 #}
+        {% for page, url in pageInfo.getPrevUrls(5) %}
+          <li><a href="{{ url }}">{{ page }}</a></li>
+        {% endfor %}
+
+        {# 現在のページ番号 #}
+        <li class="current">{{ pageInfo.currentPage }}</li>
+
+        {# 次のページがあれば、最大5ページまで出力 #}
+        {% for page, url in pageInfo.getNextUrls(5) %}
+          <li><a href="{{ url }}">{{ page }}</a></li>
+        {% endfor %}
+
+        {# 次のページがあれば出力 #}
+        {% if pageInfo.nextUrl %}
+          <li><a href="{{ pageInfo.nextUrl }}" class="pag-next-link">Next Page</a></li>
+        {% endif %}
+
       </ul>
     </div><!-- /.pagination -->
   </div><!-- /.flex -->
