@@ -24,6 +24,9 @@
   id: (featuredEntry ? 'not ' ~ featuredEntry.id : null)
 }) %}
 
+{# newsEntries を2件ごとに分割し、変数にセット #}
+{% paginate newsEntries.limit(2) as pageInfo, pageEntries %}
+
 
 {# ------------------------------------------
 出力
@@ -67,8 +70,8 @@
       </article><!-- /.featured.news-entry -->
     {% endif %}
 
-    {# 「ニュース」エントリの一覧 #}
-    {% for entry in newsEntries.all() %}
+    {# 現在のページの「ニュース」エントリ一覧 #}
+    {% for entry in pageEntries %}
       {# 「メイン画像」を取得 #}
       {% set image = entry.featuredImage.one() %}
 
