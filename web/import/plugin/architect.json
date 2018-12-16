@@ -1,0 +1,134 @@
+{
+  "fieldGroups": [
+    "Contact Info",
+    "Footer",
+    "Homepage",
+    "Services",
+    "Work"
+  ],
+  "volumes": [
+    {
+      "name": "カンパニーロゴ",
+      "handle": "companyLogos",
+      "type": "craft\\volumes\\Local",
+      "hasUrls": true,
+      "url": "@web\/assets\/logos",
+      "settings": {
+        "path": "@webroot\/assets\/logos"
+      },
+      "fieldLayout": []
+    },
+    {
+      "name": "サービスアイコン",
+      "handle": "serviceIcons",
+      "type": "craft\\volumes\\Local",
+      "hasUrls": true,
+      "url": "@web\/assets\/images\/service-icons",
+      "settings": {
+        "path": "@webroot\/assets\/images\/service-icons"
+      },
+      "fieldLayout": []
+    }
+  ],
+  "sections": [
+    {
+      "name": "会社案内",
+      "handle": "about",
+      "type": "single",
+      "enableVersioning": true,
+      "siteSettings": [
+        {
+          "hasUrls": true,
+          "uriFormat": "about",
+          "template": "about",
+          "enabledByDefault": true
+        }
+      ]
+    },
+    {
+      "name": "トップページ",
+      "handle": "homepage",
+      "type": "single",
+      "enableVersioning": true,
+      "siteSettings": [
+        {
+          "hasUrls": true,
+          "uriFormat": "__home__",
+          "template": "index",
+          "enabledByDefault": true
+        }
+      ]
+    },
+    {
+      "name": "ロケーション",
+      "handle": "locations",
+      "type": "structure",
+      "enableVersioning": true,
+      "maxLevels": "1",
+      "siteSettings": [
+        {
+          "hasUrls": false,
+          "enabledByDefault": true
+        }
+      ]
+    },
+    {
+      "name": "サービス",
+      "handle": "services",
+      "type": "structure",
+      "enableVersioning": true,
+      "maxLevels": "1",
+      "siteSettings": [
+        {
+          "hasUrls": true,
+          "uriFormat": "services\/{slug}",
+          "template": "services\/_entry",
+          "enabledByDefault": true
+        }
+      ]
+    },
+    {
+      "name": "サービス（インデックス）",
+      "handle": "servicesIndex",
+      "type": "single",
+      "enableVersioning": true,
+      "siteSettings": [
+        {
+          "hasUrls": true,
+          "uriFormat": "services",
+          "template": "services\/_index",
+          "enabledByDefault": true
+        }
+      ]
+    },
+    {
+      "name": "ワークス",
+      "handle": "work",
+      "type": "channel",
+      "enableVersioning": true,
+      "propagateEntries": true,
+      "siteSettings": [
+        {
+          "hasUrls": true,
+          "uriFormat": "work\/{slug}",
+          "template": "work\/_entry",
+          "enabledByDefault": true
+        }
+      ]
+    },
+    {
+      "name": "ワークス（インデックス）",
+      "handle": "workIndex",
+      "type": "single",
+      "enableVersioning": true,
+      "siteSettings": [
+        {
+          "hasUrls": true,
+          "uriFormat": "work",
+          "template": "work\/_index",
+          "enabledByDefault": true
+        }
+      ]
+    }
+  ]
+}
