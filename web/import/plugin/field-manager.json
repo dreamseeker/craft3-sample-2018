@@ -1,0 +1,470 @@
+[
+    {
+        "name": "住所",
+        "handle": "address",
+        "instructions": "",
+        "required": null,
+        "translationMethod": "none",
+        "translationKeyFormat": null,
+        "type": "craft\\fields\\PlainText",
+        "settings": {
+            "placeholder": "",
+            "code": false,
+            "multiline": 1,
+            "initialRows": 4,
+            "charLimit": "",
+            "columnType": "text"
+        }
+    },
+    {
+        "name": "お問い合わせ方法",
+        "handle": "contactMethods",
+        "instructions": "",
+        "required": null,
+        "translationMethod": "site",
+        "translationKeyFormat": null,
+        "type": "craft\\fields\\Matrix",
+        "settings": {
+            "minBlocks": null,
+            "maxBlocks": null,
+            "contentTable": "{{%matrixcontent_contactmethods}}",
+            "localizeBlocks": false,
+            "blockTypes": {
+                "new1": {
+                    "name": "お問い合わせ方法",
+                    "handle": "contactMethod",
+                    "fields": {
+                        "new1": {
+                            "name": "ラベル",
+                            "handle": "label",
+                            "required": 0,
+                            "instructions": "",
+                            "translationMethod": "site",
+                            "translationKeyFormat": null,
+                            "type": "craft\\fields\\PlainText",
+                            "typesettings": {
+                                "placeholder": "",
+                                "code": false,
+                                "multiline": "",
+                                "initialRows": 4,
+                                "charLimit": 255,
+                                "columnType": "string"
+                            }
+                        },
+                        "new2": {
+                            "name": "値",
+                            "handle": "data",
+                            "required": 0,
+                            "instructions": "",
+                            "translationMethod": "site",
+                            "translationKeyFormat": null,
+                            "type": "craft\\fields\\PlainText",
+                            "typesettings": {
+                                "placeholder": "",
+                                "code": false,
+                                "multiline": "",
+                                "initialRows": 4,
+                                "charLimit": 255,
+                                "columnType": "string"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    {
+        "name": "メールアドレス",
+        "handle": "email",
+        "instructions": "",
+        "required": null,
+        "translationMethod": "none",
+        "translationKeyFormat": null,
+        "type": "craft\\fields\\PlainText",
+        "settings": {
+            "placeholder": "",
+            "code": false,
+            "multiline": "",
+            "initialRows": 4,
+            "charLimit": 255,
+            "columnType": "string"
+        }
+    },
+    {
+        "name": "お問い合わせボタンのラベル",
+        "handle": "contactUsLabel",
+        "instructions": "",
+        "required": null,
+        "translationMethod": "none",
+        "translationKeyFormat": null,
+        "type": "craft\\fields\\PlainText",
+        "settings": {
+            "placeholder": "",
+            "code": false,
+            "multiline": "",
+            "initialRows": 4,
+            "charLimit": 255,
+            "columnType": "string"
+        }
+    },
+    {
+        "name": "コピーライト",
+        "handle": "copyrightNotice",
+        "instructions": "",
+        "required": null,
+        "translationMethod": "none",
+        "translationKeyFormat": null,
+        "type": "craft\\fields\\PlainText",
+        "settings": {
+            "placeholder": "",
+            "code": false,
+            "multiline": "",
+            "initialRows": 4,
+            "charLimit": 255,
+            "columnType": "string"
+        }
+    },
+    {
+        "name": "背景色",
+        "handle": "backgroundColor",
+        "instructions": "代替の背景色を HEX 値で指定してください。",
+        "required": null,
+        "translationMethod": "none",
+        "translationKeyFormat": null,
+        "type": "craft\\fields\\Color",
+        "settings": {
+            "defaultColor": null
+        }
+    },
+    {
+        "name": "本文",
+        "handle": "body",
+        "instructions": null,
+        "required": null,
+        "translationMethod": "site",
+        "translationKeyFormat": null,
+        "type": "craft\\redactor\\Field",
+        "settings": {
+            "redactorConfig": "Standard.json",
+            "purifierConfig": null,
+            "cleanupHtml": true,
+            "purifyHtml": true,
+            "columnType": "text",
+            "availableVolumes": "*",
+            "availableTransforms": "*"
+        }
+    },
+    {
+        "name": "サムネイル画像",
+        "handle": "featuredThumb",
+        "instructions": "サイトトップやアーカイブページで使用するサムネイル画像。",
+        "required": null,
+        "translationMethod": "site",
+        "translationKeyFormat": null,
+        "type": "craft\\fields\\Assets",
+        "settings": {
+            "useSingleFolder": "",
+            "defaultUploadLocationSource": "folder:1",
+            "defaultUploadLocationSubpath": "",
+            "singleUploadLocationSource": "folder:1",
+            "singleUploadLocationSubpath": "",
+            "restrictFiles": "",
+            "allowedKinds": null,
+            "sources": "*",
+            "source": null,
+            "targetSiteId": null,
+            "viewMode": null,
+            "limit": 1,
+            "selectionLabel": null,
+            "localizeRelations": false
+        }
+    },
+    {
+        "name": "インデックスページ用見出し",
+        "handle": "indexHeading",
+        "instructions": "「サービス」インデックスページの見出し。",
+        "required": null,
+        "translationMethod": "none",
+        "translationKeyFormat": null,
+        "type": "craft\\redactor\\Field",
+        "settings": {
+            "redactorConfig": "",
+            "purifierConfig": null,
+            "cleanupHtml": "",
+            "purifyHtml": 1,
+            "columnType": "text",
+            "availableVolumes": "*",
+            "availableTransforms": "*"
+        }
+    },
+    {
+        "name": "クライアントロゴ",
+        "handle": "clientLogos",
+        "instructions": "",
+        "required": null,
+        "translationMethod": "site",
+        "translationKeyFormat": null,
+        "type": "craft\\fields\\Assets",
+        "settings": {
+            "useSingleFolder": "",
+            "defaultUploadLocationSource": "folder:5",
+            "defaultUploadLocationSubpath": "",
+            "singleUploadLocationSource": "folder:1",
+            "singleUploadLocationSubpath": "",
+            "restrictFiles": "",
+            "allowedKinds": null,
+            "sources": [
+                "folder:5"
+            ],
+            "source": null,
+            "targetSiteId": null,
+            "viewMode": null,
+            "limit": "",
+            "selectionLabel": null,
+            "localizeRelations": false
+        }
+    },
+    {
+        "name": "ヒーロー画像",
+        "handle": "heroImage",
+        "instructions": "トップページのヒーロー画像を選択。画像サイズは 1450\u00d7916 を推奨。",
+        "required": null,
+        "translationMethod": "site",
+        "translationKeyFormat": null,
+        "type": "craft\\fields\\Assets",
+        "settings": {
+            "useSingleFolder": "",
+            "defaultUploadLocationSource": "folder:1",
+            "defaultUploadLocationSubpath": "",
+            "singleUploadLocationSource": "folder:1",
+            "singleUploadLocationSubpath": "",
+            "restrictFiles": "",
+            "allowedKinds": null,
+            "sources": [
+                "folder:1"
+            ],
+            "source": null,
+            "targetSiteId": null,
+            "viewMode": null,
+            "limit": 1,
+            "selectionLabel": null,
+            "localizeRelations": false
+        }
+    },
+    {
+        "name": "お客様の声",
+        "handle": "testimonials",
+        "instructions": "",
+        "required": null,
+        "translationMethod": "site",
+        "translationKeyFormat": null,
+        "type": "craft\\fields\\Matrix",
+        "settings": {
+            "minBlocks": null,
+            "maxBlocks": 3,
+            "contentTable": "{{%matrixcontent_testimonials}}",
+            "localizeBlocks": false,
+            "blockTypes": {
+                "new1": {
+                    "name": "お客様の声",
+                    "handle": "testimonial",
+                    "fields": {
+                        "new1": {
+                            "name": "引用",
+                            "handle": "quote",
+                            "required": 0,
+                            "instructions": "",
+                            "translationMethod": "site",
+                            "translationKeyFormat": null,
+                            "type": "craft\\fields\\PlainText",
+                            "typesettings": {
+                                "placeholder": "",
+                                "code": false,
+                                "multiline": "",
+                                "initialRows": 4,
+                                "charLimit": "",
+                                "columnType": "text"
+                            }
+                        },
+                        "new2": {
+                            "name": "名前",
+                            "handle": "cite",
+                            "required": 0,
+                            "instructions": "",
+                            "translationMethod": "site",
+                            "translationKeyFormat": null,
+                            "type": "craft\\fields\\PlainText",
+                            "typesettings": {
+                                "placeholder": "",
+                                "code": false,
+                                "multiline": "",
+                                "initialRows": 4,
+                                "charLimit": "",
+                                "columnType": "text"
+                            }
+                        },
+                        "new3": {
+                            "name": "画像",
+                            "handle": "photo",
+                            "required": 0,
+                            "instructions": "",
+                            "translationMethod": "site",
+                            "translationKeyFormat": null,
+                            "type": "craft\\fields\\Assets",
+                            "typesettings": {
+                                "useSingleFolder": "",
+                                "defaultUploadLocationSource": "folder:1",
+                                "defaultUploadLocationSubpath": "",
+                                "singleUploadLocationSource": "folder:1",
+                                "singleUploadLocationSubpath": "",
+                                "restrictFiles": "",
+                                "allowedKinds": null,
+                                "sources": [
+                                    "folder:1"
+                                ],
+                                "source": null,
+                                "targetSiteId": null,
+                                "viewMode": null,
+                                "limit": 1,
+                                "selectionLabel": null,
+                                "localizeRelations": false
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    {
+        "name": "サービス本文",
+        "handle": "serviceBody",
+        "instructions": "",
+        "required": null,
+        "translationMethod": "site",
+        "translationKeyFormat": null,
+        "type": "craft\\fields\\Matrix",
+        "settings": {
+            "minBlocks": null,
+            "maxBlocks": null,
+            "contentTable": "{{%matrixcontent_servicebody}}",
+            "localizeBlocks": false,
+            "blockTypes": {
+                "new1": {
+                    "name": "サービスポイント",
+                    "handle": "servicesPoint",
+                    "fields": {
+                        "new1": {
+                            "name": "Heading",
+                            "handle": "heading",
+                            "required": 0,
+                            "instructions": "",
+                            "translationMethod": "site",
+                            "translationKeyFormat": null,
+                            "type": "craft\\fields\\PlainText",
+                            "typesettings": {
+                                "placeholder": "",
+                                "code": false,
+                                "multiline": "",
+                                "initialRows": 4,
+                                "charLimit": "",
+                                "columnType": "text"
+                            }
+                        },
+                        "new2": {
+                            "name": "テキスト",
+                            "handle": "text",
+                            "required": 0,
+                            "instructions": "",
+                            "translationMethod": "site",
+                            "translationKeyFormat": null,
+                            "type": "craft\\redactor\\Field",
+                            "typesettings": {
+                                "redactorConfig": "",
+                                "purifierConfig": null,
+                                "cleanupHtml": 1,
+                                "purifyHtml": 1,
+                                "columnType": "text",
+                                "availableVolumes": "*",
+                                "availableTransforms": "*"
+                            }
+                        },
+                        "new3": {
+                            "name": "画像",
+                            "handle": "image",
+                            "required": 0,
+                            "instructions": "",
+                            "translationMethod": "site",
+                            "translationKeyFormat": null,
+                            "type": "craft\\fields\\Assets",
+                            "typesettings": {
+                                "useSingleFolder": "",
+                                "defaultUploadLocationSource": "folder:1",
+                                "defaultUploadLocationSubpath": "",
+                                "singleUploadLocationSource": "folder:1",
+                                "singleUploadLocationSubpath": "",
+                                "restrictFiles": "",
+                                "allowedKinds": null,
+                                "sources": [
+                                    "folder:1"
+                                ],
+                                "source": null,
+                                "targetSiteId": null,
+                                "viewMode": null,
+                                "limit": 1,
+                                "selectionLabel": null,
+                                "localizeRelations": false
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    {
+        "name": "サービスアイコン",
+        "handle": "serviceIcon",
+        "instructions": "",
+        "required": null,
+        "translationMethod": "site",
+        "translationKeyFormat": null,
+        "type": "craft\\fields\\Assets",
+        "settings": {
+            "useSingleFolder": "",
+            "defaultUploadLocationSource": "folder:6",
+            "defaultUploadLocationSubpath": "",
+            "singleUploadLocationSource": "folder:1",
+            "singleUploadLocationSubpath": "",
+            "restrictFiles": "",
+            "allowedKinds": null,
+            "sources": [
+                "folder:6"
+            ],
+            "source": null,
+            "targetSiteId": null,
+            "viewMode": null,
+            "limit": 1,
+            "selectionLabel": null,
+            "localizeRelations": false
+        }
+    },
+    {
+        "name": "サービス種別",
+        "handle": "servicesPerformed",
+        "instructions": "",
+        "required": null,
+        "translationMethod": "site",
+        "translationKeyFormat": null,
+        "type": "craft\\fields\\Entries",
+        "settings": {
+            "sources": [
+                "section:5"
+            ],
+            "source": null,
+            "targetSiteId": null,
+            "viewMode": null,
+            "limit": "",
+            "selectionLabel": null,
+            "localizeRelations": false
+        }
+    }
+]
