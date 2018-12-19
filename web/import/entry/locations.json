@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "title": "Happy Lager Chicago",
+      "slug": "happy-lager-chicago",
+      "postDate": "2015-02-10 19:09:38",
+      "featuredImage": "chicago-office.jpg",
+      "address": "2701 West Thomas St\nChicago, Il 60622",
+      "Matrix": {
+        "contactMethods": [
+          {
+            "contactMethod_label": "Main Office",
+            "contactMethod_data": "312.900.2356"
+          },
+          {
+            "contactMethod_label": "Sales",
+            "contactMethod_data": "312.985.4500"
+          },
+          {
+            "contactMethod_label": "Fax",
+            "contactMethod_data": "312.229.1122"
+          }
+        ]
+      },
+      "email": "chicago@happylager.dev"
+    }
+  ]
+}

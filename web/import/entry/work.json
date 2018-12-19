@@ -1,0 +1,208 @@
+{
+  "items": [
+    {
+      "title": "タイトル",
+      "slug": "entry-slug",
+      "postDate": "2018-12-19 00:00:00",
+      "expiryDate": "2018-12-01 00:00:00",
+      "shortDescription": "概要文",
+      "heading": "大見出し",
+      "subheading": "小見出し",
+      "Matrix": {
+        "articleBody": [
+          {
+            "newSection_sectionHeading": "セクション見出し"
+          },
+          {
+            "heading_heading": "見出し"
+          },
+          {
+            "text_text": "テキスト",
+            "text_position": "center"
+          },
+          {
+            "pullQuote_pullQuote": "リード文",
+            "pullQuote_position": "left"
+          },
+          {
+            "image_image": "awesome-cities.jpg",
+            "image_caption": "キャプション",
+            "image_position": "right"
+          },
+          {
+            "gallery_images": [
+              "bike.jpg",
+              "glasses.jpg",
+              "skateboard.jpg"
+            ]
+          },
+          {
+            "quote_quote": "引用",
+            "quote_attribution": "帰属",
+            "quote_position": "center"
+          }
+        ],
+        "serviceBody": [
+          {
+            "servicePoint_heading": "見出し",
+            "servicePoint_text": "テキスト",
+            "servicePoint_image": "discover.jpg"
+          }
+        ]
+      },
+      "servicesPerformed": [
+        "seo"
+      ],
+      "featuredImage": "sportsrus-bigfeature.jpg",
+      "featuredThumb": "sports-r-us-thumb.jpg",
+      "backgroundColor": "#111"
+    },
+    {
+      "title": "Sports R&#039; Us",
+      "slug": "sports-r-us",
+      "postDate": "2014-10-06 01:30:00",
+      "shortDescription": "\u003Cp\u003E\n\tNew e-commerce experience for Sports R' Us\n\u003C\/p\u003E",
+      "heading": "Taking Sports to the Air",
+      "subheading": "Sports R’ Us Sales needed a major Energy Boost.",
+      "Matrix": {
+        "articleBody": [
+          {
+            "text_text": "\u003Cp\u003E\n\tVero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum. deleniti atque corrupti quos dolores. Et harum quidem rerm facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime. Vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum. deleniti atque corrupti quos dolores. Et harum quidem rerm facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime.\n\u003C\/p\u003E",
+            "text_positoin": "center"
+          },
+          {
+            "image_image": "skis.jpg",
+            "image_caption": "",
+            "image_positoin": "right"
+          },
+          {
+            "text_text": "\u003Ch4\u003EExpanding while keeping excellence the focus\u003C\/h4\u003E\n\u003Cp\u003E\n\tVero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum. deleniti atque corrupti quos dolores. Et harum quidem rerm facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime. Vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum. deleniti atque corrupti quos dolores. Et harum quidem rerm facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime.\n\u003C\/p\u003E",
+            "text_positoin": "center"
+          },
+          {
+            "quote_quote": "Our sales needed a major overhaul. Happy Lager took us into the 21st Century",
+            "quote_attribution": "Anthony Umlaut, Director of Marketing",
+            "quote_positoin": "center"
+          },
+          {
+            "heading_heading": "Things We Learned"
+          },
+          {
+            "text_text": "\u003Cp\u003E\n\tItaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.\n\u003C\/p\u003E\n\u003Cp\u003E\n\tItaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.\n\u003C\/p\u003E\n\u003Cp\u003E\n\tItaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.\n\u003C\/p\u003E",
+            "text_positoin": "center"
+          }
+        ]
+      },
+      "servicesPerformed": [
+        "seo",
+        "email-marketing",
+        "strategy"
+      ],
+      "featuredImage": "sportsrus-bigfeature.jpg",
+      "featuredThumb": "sports-r-us-thumb.jpg",
+      "backgroundColor": "#184572"
+    },
+    {
+      "title": "Diva!",
+      "slug": "diva",
+      "postDate": "2014-10-05 03:10:00",
+      "shortDescription": "\u003Cp\u003E\r\n\tIn July, we released Diva!, our celebrity music app.\r\n\u003C\/p\u003E",
+      "heading": "A Star Is Born",
+      "subheading": "Combining Music with Celebrity gossip has become the winning combination making DIVA! the most downloaded app of 2013",
+      "Matrix": {
+        "articleBody": [
+          {
+            "text_text": "\u003Cp\u003E\r\n\tNam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut.\r\n\u003C\/p\u003E\u003Cp\u003E\r\n\tNam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.\r\n\u003C\/p\u003E",
+            "text_positoin": "center"
+          },
+          {
+            "image_image": "diva-interface-detail.png",
+            "image_caption": "\u003Cp\u003E\r\n\t\u003Cstrong\u003EKeep your favs Close By.\u003C\/strong\u003E Vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.\r\n\u003C\/p\u003E",
+            "image_positoin": "center"
+          },
+          {
+            "heading_heading": "Prototype It To Death"
+          },
+          {
+            "text_text": "\u003Cp\u003E\r\n\tVero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.\r\n\u003C\/p\u003E",
+            "text_positoin": "center"
+          },
+          {
+            "quote_quote": "What the iphone has done for personal computing, DIVA! has done for Celebrity Stalking",
+            "quote_attribution": "Josh Rubin, Cool Hunting",
+            "quote_positoin": "full"
+          },
+          {
+            "heading_heading": "Find that Perfect Balance"
+          },
+          {
+            "text_text": "\u003Cp\u003E\r\n\tVero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.\r\n\u003C\/p\u003E",
+            "text_positoin": "center"
+          },
+          {
+            "image_image": "diva-mobile-detail.png",
+            "image_caption": "",
+            "image_positoin": "center"
+          },
+          {
+            "text_text": "\u003Cp\u003E\r\n\tDducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.\r\n\u003C\/p\u003E\u003Cp\u003E\r\n\tEt harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.\r\n\u003C\/p\u003E",
+            "text_positoin": "center"
+          }
+        ]
+      },
+      "servicesPerformed": [
+        "design",
+        "strategy",
+        "development"
+      ],
+      "featuredImage": "diva-interface-work.jpg",
+      "featuredThumb": "diva-cover.jpg",
+      "backgroundColor": "#2f1c54"
+    },
+    {
+      "title": "On Track",
+      "slug": "on-track",
+      "postDate": "2014-10-05 03:05:00",
+      "shortDescription": "\u003Cp\u003E\r\n\tOur desktop software for the busy forex trader.\r\n\u003C\/p\u003E",
+      "heading": "Happy Lager + MOOSIC =  Better Mobile Experience",
+      "subheading": "From beginning to end we brought their beloved desktop experience into a literal whole new world.",
+      "Matrix": {
+        "articleBody": [
+          {
+            "text_text": "\u003Cp\u003E\r\n\tNam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut.\r\n\u003C\/p\u003E\u003Cp\u003E\r\n\tNam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.\r\n\u003C\/p\u003E",
+            "text_positoin": "center"
+          },
+          {
+            "text_text": "\u003Ch4\u003ESimpler, faster, better\u003C\/h4\u003E\u003Cp\u003E\r\n\tNam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.\r\n\u003C\/p\u003E",
+            "text_positoin": "left"
+          },
+          {
+            "image_image": "moosic-app-ui.jpg",
+            "image_caption": "",
+            "image_positoin": "right"
+          },
+          {
+            "quote_quote": "My Experience with photography comes from the content. It comes from engaging people every day.",
+            "quote_attribution": "Christopher McKarley, Photographer",
+            "quote_positoin": "full"
+          },
+          {
+            "heading_heading": "Connecting with the audience"
+          },
+          {
+            "text_text": "\u003Cp\u003E\r\n\tDducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.\r\n\u003C\/p\u003E\u003Cp\u003E\r\n\tEt harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.\r\n\u003C\/p\u003E\u003Cp\u003E\r\n\tDducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.\r\n\u003C\/p\u003E\u003Cp\u003E\r\n\tEt harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.\r\n\u003C\/p\u003E",
+            "text_positoin": "center"
+          }
+        ]
+      },
+      "servicesPerformed": [
+        "app-development",
+        "development",
+        "design"
+      ],
+      "featuredImage": "moosic-app-ui.jpg",
+      "featuredThumb": "on-track-thumb.jpg",
+      "backgroundColor": "#ab4666"
+    }
+  ]
+}

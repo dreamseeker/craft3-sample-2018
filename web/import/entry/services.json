@@ -1,0 +1,281 @@
+{
+  "items": [
+    {
+      "title": "タイトル",
+      "slug": "entry-slug",
+      "postDate": "2018-12-19 00:00:00",
+      "expiryDate": "2018-12-01 00:00:00",
+      "featuredImage": "news-link-2-image.jpg",
+      "serviceIcon": "design.svg",
+      "shortDescription": "概要文",
+      "Matrix": {
+        "articleBody": [
+          {
+            "newSection_sectionHeading": "セクション見出し"
+          },
+          {
+            "heading_heading": "見出し"
+          },
+          {
+            "text_text": "テキスト",
+            "text_position": "center"
+          },
+          {
+            "pullQuote_pullQuote": "リード文",
+            "pullQuote_position": "left"
+          },
+          {
+            "image_image": "awesome-cities.jpg",
+            "image_caption": "キャプション",
+            "image_position": "right"
+          },
+          {
+            "gallery_images": [
+              "bike.jpg",
+              "glasses.jpg",
+              "skateboard.jpg"
+            ]
+          },
+          {
+            "quote_quote": "引用",
+            "quote_attribution": "帰属",
+            "quote_position": "center"
+          }
+        ],
+        "serviceBody": [
+          {
+            "servicePoint_heading": "見出し",
+            "servicePoint_text": "テキスト",
+            "servicePoint_image": "discover.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "title": "Design",
+      "slug": "design",
+      "postDate": "2014-10-04 15:49:00",
+      "featuredImage": "news-link-2-image.jpg",
+      "serviceIcon": "design.svg",
+      "shortDescription": "\u003Cp\u003E\r\n\tWe're a close-knit team of agile thinkers ready to create.\r\n\u003C\/p\u003E",
+      "Matrix": {
+        "articleBody": [
+          {
+            "quote_quote": "Good Design is Invisible",
+            "quote_attribution": "A smart designer",
+            "quote_positoin": "center"
+          },
+          {
+            "heading_heading": "Design based design"
+          },
+          {
+            "text_text": "\u003Cp\u003E\r\n\tWe've been developing them libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facer possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum quod maxime placeat facernecessitatibus.\r\n\u003C\/p\u003E",
+            "text_positoin": "center"
+          }
+        ],
+        "serviceBody": [
+          {
+            "servicePoint_heading": "Discover your audience",
+            "servicePoint_text": "\u003Cp\u003E\r\n\tYour audience is human, but their device is not. We like to cross that gap by engaging your audience in casual conversation as one would at their local pub.\r\n\u003C\/p\u003E",
+            "servicePoint_image": "discover.jpg"
+          },
+          {
+            "servicePoint_heading": "Explore all possibilities",
+            "servicePoint_text": "\u003Cp\u003E\r\n\tYour product is a journey; a story. At Happy Lager we follow that story to create holistic experience giving you the best possible product.\r\n\u003C\/p\u003E",
+            "servicePoint_image": "explore.jpg"
+          },
+          {
+            "servicePoint_heading": "Create Genius",
+            "servicePoint_text": "\u003Cp\u003E\r\n\tYou are the inspiration and we are the perspiration. Together we can create genius; and throw back a few in the process.\r\n\u003C\/p\u003E",
+            "servicePoint_image": "create-genius.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "title": "Development",
+      "slug": "development",
+      "postDate": "2014-10-04 15:48:00",
+      "featuredImage": "development.jpg",
+      "serviceIcon": "development.svg",
+      "shortDescription": "\u003Cp\u003E\r\n\tOur development is strong, tight and clean.\r\n\u003C\/p\u003E",
+      "Matrix": {
+        "articleBody": [
+          {
+            "heading_heading": "Standards based Development"
+          },
+          {
+            "text_text": "\u003Cp\u003E\r\n\tWe've been developing them libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facer possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum quod maxime placeat facernecessitatibus.\r\n\u003C\/p\u003E",
+            "text_positoin": "center"
+          }
+        ],
+        "serviceBody": [
+          {
+            "servicePoint_heading": "Explore all possibilities",
+            "servicePoint_text": "\u003Cp\u003E\r\n\tYour product is a journey; a story. At Happy Lager we follow that story to create holistic experience giving you the best possible product.\r\n\u003C\/p\u003E",
+            "servicePoint_image": "explore.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "title": "Strategy",
+      "slug": "strategy",
+      "postDate": "2014-10-04 15:48:00",
+      "featuredImage": "strategy.jpg",
+      "serviceIcon": "strategy.svg",
+      "shortDescription": "\u003Cp\u003E\r\n\tWe love it when a plan comes together.\r\n\u003C\/p\u003E",
+      "Matrix": {
+        "articleBody": [
+          {
+            "quote_quote": "Happy Lager helped us realize our goals.",
+            "quote_attribution": "A satisfied Customer",
+            "quote_positoin": "center"
+          },
+          {
+            "heading_heading": "We love it when a plan comes together."
+          },
+          {
+            "text_text": "\u003Cp\u003E\r\n\tWe've been developing them libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facer possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum quod maxime placeat facernecessitatibus.\r\n\u003C\/p\u003E",
+            "text_positoin": "center"
+          }
+        ],
+        "serviceBody": [
+          {
+            "servicePoint_heading": "Explore all possibilities",
+            "servicePoint_text": "\u003Cp\u003E\r\n\tYour product is a journey; a story. At Happy Lager we follow that story to create holistic experience giving you the best possible product.\r\n\u003C\/p\u003E",
+            "servicePoint_image": "explore.jpg"
+          },
+          {
+            "servicePoint_heading": "Discover your audience",
+            "servicePoint_text": "\u003Cp\u003E\r\n\tYour audience is human, but their device is not. We like to cross that gap by engaging your audience in casual conversation as one would at their local pub.\r\n\u003C\/p\u003E",
+            "servicePoint_image": "discover.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "title": "App Development",
+      "slug": "app-development",
+      "postDate": "2014-10-04 15:47:00",
+      "featuredImage": "app-development.jpg",
+      "serviceIcon": "app-development.svg",
+      "shortDescription": "\u003Cp\u003E\r\n\tOur apps are as good as our taste buds.\r\n\u003C\/p\u003E",
+      "Matrix": {
+        "articleBody": [
+          {
+            "quote_quote": "Hey, You&#039;ve got nice apps!",
+            "quote_attribution": "A Satisfied Customer",
+            "quote_positoin": "center"
+          },
+          {
+            "heading_heading": "We pride ourselves in our toned apps"
+          },
+          {
+            "text_text": "\u003Cp\u003E\r\n\tWe've been developing them libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facer possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum  quod maxime placeat facernecessitatibus.\r\n\u003C\/p\u003E",
+            "text_positoin": "center"
+          }
+        ],
+        "serviceBody": [
+          {
+            "servicePoint_heading": "Discover your audience",
+            "servicePoint_text": "\u003Cp\u003E\r\n\tYour audience is human, but their device is not. We like to cross that gap by engaging your audience in casual conversation as one would at their local pub.\r\n\u003C\/p\u003E",
+            "servicePoint_image": "discover.jpg"
+          },
+          {
+            "servicePoint_heading": "Explore all possibilities",
+            "servicePoint_text": "\u003Cp\u003E\r\n\tYour product is a journey; a story. At Happy Lager we follow that story to create holistic experience giving you the best possible product.\r\n\u003C\/p\u003E",
+            "servicePoint_image": "explore.jpg"
+          },
+          {
+            "servicePoint_heading": "Create Genius",
+            "servicePoint_text": "\u003Cp\u003E\r\n\tYou are the inspiration and we are the perspiration. Together we can create genius; and throw back a few in the process.\r\n\u003C\/p\u003E",
+            "servicePoint_image": "create-genius.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "title": "SEO",
+      "slug": "seo",
+      "postDate": "2014-10-04 15:42:00",
+      "featuredImage": "seo.jpg",
+      "serviceIcon": "seo.svg",
+      "shortDescription": "\u003Cp\u003E\r\n\tWe optimize everything we do so your audience can find you.\r\n\u003C\/p\u003E",
+      "Matrix": {
+        "articleBody": [
+          {
+            "heading_heading": "We optimize everything we do so your audience can find you."
+          },
+          {
+            "text_text": "\u003Cp\u003E\r\n\tWe've been developing them libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facer possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum quod maxime placeat facernecessitatibus.\r\n\u003C\/p\u003E",
+            "text_positoin": "center"
+          },
+          {
+            "quote_quote": "SEO from Happy Lager is the best!",
+            "quote_attribution": "One Lucky Customer",
+            "quote_positoin": "center"
+          }
+        ],
+        "serviceBody": [
+          {
+            "servicePoint_heading": "Discover your audience",
+            "servicePoint_text": "\u003Cp\u003E\r\n\tYour audience is human, but their device is not. We like to cross that gap by engaging your audience in casual conversation as one would at their local pub.\r\n\u003C\/p\u003E",
+            "servicePoint_image": "discover.jpg"
+          },
+          {
+            "servicePoint_heading": "Create Genius",
+            "servicePoint_text": "\u003Cp\u003E\r\n\tYou are the inspiration and we are the perspiration. Together we can create genius; and throw back a few in the process.\r\n\u003C\/p\u003E",
+            "servicePoint_image": "create-genius.jpg"
+          },
+          {
+            "servicePoint_heading": "Explore all possibilities",
+            "servicePoint_text": "\u003Cp\u003E\r\n\tYour product is a journey; a story. At Happy Lager we follow that story to create holistic experience giving you the best possible product.\r\n\u003C\/p\u003E",
+            "servicePoint_image": "explore.jpg"
+          }
+        ]
+      }
+    },
+    {
+      "title": "Email Marketing",
+      "slug": "email-marketing",
+      "postDate": "2014-10-04 15:40:00",
+      "featuredImage": "email-marketing.jpg",
+      "serviceIcon": "email-marketing.svg",
+      "shortDescription": "\u003Cp\u003E\r\n\tStay connected in an ever changing world.\r\n\u003C\/p\u003E",
+      "Matrix": {
+        "articleBody": [
+          {
+            "quote_quote": "Howdy, I like those emails!",
+            "quote_attribution": "A Satisfied Customer",
+            "quote_positoin": "center"
+          },
+          {
+            "heading_heading": "We pride ourselves in our effective email campaigns."
+          },
+          {
+            "text_text": "\u003Cp\u003E\r\n\tWe've been developing them libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facer possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum quod maxime placeat facernecessitatibus.\r\n\u003C\/p\u003E",
+            "text_positoin": "center"
+          }
+        ],
+        "serviceBody": [
+          {
+            "servicePoint_heading": "Discover your audience",
+            "servicePoint_text": "\u003Cp\u003E\r\n\tYour audience is human, but their device is not. We like to cross that gap by engaging your audience in casual conversation as one would at their local pub.\r\n\u003C\/p\u003E",
+            "servicePoint_image": "discover.jpg"
+          },
+          {
+            "servicePoint_heading": "Explore all possibilities",
+            "servicePoint_text": "\u003Cp\u003E\r\n\tYour product is a journey; a story. At Happy Lager we follow that story to create holistic experience giving you the best possible product.\r\n\u003C\/p\u003E",
+            "servicePoint_image": "explore.jpg"
+          },
+          {
+            "servicePoint_heading": "Create Genius",
+            "servicePoint_text": "\u003Cp\u003E\r\n\tYou are the inspiration and we are the perspiration. Together we can create genius; and throw back a few in the process.\r\n\u003C\/p\u003E",
+            "servicePoint_image": "create-genius.jpg"
+          }
+        ]
+      }
+    }
+  ]
+}
