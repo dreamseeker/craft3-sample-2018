@@ -1,0 +1,37 @@
+{
+  "items": [
+    {
+      "title": "Homepage",
+      "slug": "homepage",
+      "postDate": "2014-07-29 18:21:35",
+      "heroImage": "hero-image.jpg",
+      "address": "",
+      "Matrix": {
+        "testimonials": [
+          {
+            "testimonial_quote": "Happy Lager delivered the most comprehensive strategy from a boutique company that I’ve ever seen.",
+            "testimonial_cite": "Larry Page",
+            "testimonial_photo": "larry-page.png"
+          },
+          {
+            "testimonial_quote": "I don’t know where to begin. I can’t recommend Happy Lager highly enough.",
+            "testimonial_cite": "Ryan Reynolds",
+            "testimonial_photo": "ryan-reynolds.png"
+          },
+          {
+            "testimonial_quote": "Happy Lager sells the good stuff.",
+            "testimonial_cite": "Bob Guff",
+            "testimonial_photo": "bob-guff.png"
+          }
+        ]
+      },
+      "clientLogos": [
+        "logo-coke.png",
+        "logo-google.png",
+        "logo-Jetblue.png",
+        "logo-mtv.png",
+        "logo-newbelgium.png"
+      ]
+    }
+  ]
+}
