@@ -10,6 +10,9 @@
 {# meta タイトル #}
 {% set metaTitle = '会社案内' %}
 
+{# 「ロケーション」セクションのエントリを取得 #}
+{% set locationEntries = craft.entries.section('locations').all() %}
+
 
 {# ------------------------------------------
 出力
@@ -44,32 +47,60 @@
   {# 「article 本文」モジュールを読み込み #}
   {% include "_partials/article_body" %}
 
-  <section class="alt2">
-    <div class="flex">
-      <div class="g1-flex4 g2-flex6 g3-flex5">
-        <h1 class="gamma subfont alt">Happy Lager Chicago</h1>
-        <p class="delta subfont caps address">2701 West Thomas St<br/>
-          Chicago, Il 60622</p>
-        <dl class="inline">
-          <dt>Main Office</dt>
-          <dd>312.900.2356</dd>
-          <dt>Sales</dt>
-          <dd>312.985.4500</dd>
-          <dt>Fax</dt>
-          <dd>312.229.1122</dd>
-        </dl><!-- /.inline -->
-        <ul class="horz-list">
-          <li>
-            <a href="mailto:chicago@happylager.dev" class="subfont caps email-us-btn">Email Us</a>
-          </li>
-          <li>
-            <a href="https://www.google.com/maps/search/2701%20West%20Thomas%20St%2C%20Chicago%2C%20Il%2060622" target="_blank" class="subfont caps map-btn">Map</a>
-          </li>
-        </ul><!-- /.horz-list -->
-      </div>
-      <div class="g1-flex4 g2-flex6 g3-flex7">
-        <img src="https://placehold.jp/3d4070/42598f/520x320.png" alt="Happy Lager Chicago"/>
-      </div>
-    </div><!-- /.flex -->
-  </section><!-- /.alt2 -->
+  {# 「ロケーション」セクションのエントリ一覧 #}
+  {% for locationEntry in locationEntries %}
+    {# 「メイン画像」フィールドを取得 #}
+    {% set image = locationEntry.featuredImage.one() %}
+
+    <section class="alt2">
+      <div class="flex">
+        <div class="g1-flex4 g2-flex6 g3-flex5">
+          <h1 class="gamma subfont alt">{{ locationEntry.title }}</h1>
+
+          {# 「住所」がセットされている場合のみ出力 #}
+          {% if locationEntry.address %}
+            <p class="delta subfont caps address">{{ locationEntry.address | nl2br }}</p>
+          {% endif %}
+
+          {# 「お問い合わせ方法」がセットされている場合のみ出力 #}
+          {% if locationEntry.contactMethods | length %}
+            <dl class="inline">
+              {# ブロックのループ処理 #}
+              {% for block in locationEntry.contactMethods.all() %}
+                <dt>{{ block.label }}</dt>
+                <dd>{{ block.data }}</dd>
+              {% endfor %}
+            </dl>
+          {% endif %}
+
+          {# 「メールアドレス」または「住所」がセットされている場合のみ出力 #}
+          {% if locationEntry.email or locationEntry.address %}
+            <ul class="horz-list">
+              {# 「メールアドレス」がセットされている場合のみ出力 #}
+              {% if locationEntry.email %}
+                <li>
+                  <a href="mailto:{{ locationEntry.email }}" class="subfont caps email-us-btn">Email Us</a>
+                </li>
+              {% endif %}
+
+              {# 「住所」がセットされている場合のみ出力 #}
+              {% if locationEntry.address %}
+                {# 「住所」フィールドを利用した Google マップのリンク URL をセット #}
+                {% set googleMapsUrl = 'https://www.google.com/maps/search/' ~ locationEntry.address | replace("\n", ', ') | url_encode %}
+                <li>
+                  <a href="{{ googleMapsUrl }}" target="_blank" class="subfont caps map-btn">Map</a>
+                </li>
+              {% endif %}
+            </ul>
+          {% endif %}
+        </div>
+        <div class="g1-flex4 g2-flex6 g3-flex7">
+          {# 「画像」がセットされている場合のみ出力 #}
+          {% if image %}
+            <img src="{{ image.getUrl('medium') }}" alt="{{ image.title }}" />
+          {% endif %}
+        </div>
+      </div><!-- /.flex -->
+    </section><!-- /.alt2 -->
+  {% endfor %}
 {% endblock %}
