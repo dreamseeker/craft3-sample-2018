@@ -34,18 +34,18 @@
         <footer>
           <hr class="horz-rule">
           <p class="services center">
-            <a href="../services/detail.html">
-              <img src="/assets/images/service-icons/seo.svg" alt="seo">
-              <span class="services-title">SEO</span>
-            </a>
-            <a href="../services/detail.html">
-              <img src="/assets/images/service-icons/email-marketing.svg" alt="email-marketing">
-              <span class="services-title">Email Marketing</span>
-            </a>
-            <a href="../services/detail.html">
-              <img src="/assets/images/service-icons/strategy.svg" alt="strategy">
-              <span class="services-title">Strategy</span>
-            </a>
+            {% for serviceEntry in entry.servicesPerformed.all() %}
+              {# 「サービスアイコン」フィールドを取得 #}
+              {% set image = serviceEntry.serviceIcon.one() %}
+
+              <a href="{{ serviceEntry.url }}">
+                {# 「サービスアイコン」がセットされている場合のみ出力 #}
+                {% if image %}
+                  <img src="{{ image.url }}" alt="{{ image.title }}">
+                {% endif %}
+                <span class="services-title">{{ serviceEntry.title }}</span>
+              </a>
+            {% endfor %}
           </p>
           <hr class="horz-rule">
         </footer>
