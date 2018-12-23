@@ -19,4 +19,9 @@
 
 {# main ブロック #}
 {% block main %}
+  <ul>
+    {% for entry in craft.entries.section('services').all() %}
+      <li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
+    {% endfor %}
+  </ul>
 {% endblock %}
