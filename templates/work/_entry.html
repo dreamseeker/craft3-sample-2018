@@ -20,90 +20,12 @@
 {# main ブロック #}
 {% block main %}
   <article>
-    <header class="alt2" style="background:#184572;">
-      <div class="flex">
-        <div class="g1-flex4 g2-flex6 g3-flex12">
-          <h1 class="alpha center reverse">Sports R&#039; Us</h1>
-        </div>
-      </div><!-- /.flex -->
-    </header><!-- /.alt2 -->
-    <section>
-      <img class="contain-media" src="https://placehold.jp/3d4070/42598f/1440x360.png" alt="sportsrus-bigfeature">
-    </section><!-- /seciton -->
-    <div class="flex">
-      <div class="g1-flex4 g2-flex6 g3-flex10 g3-offset1">
-        <hr class="horz-rule">
-        <h2 class="beta center">Taking Sports to the Air</h2>
-        <h3 class="delta center subfont">Sports R’ Us Sales needed a major Energy Boost.</h3>
-        <hr class="horz-rule">
-      </div>
-    </div><!-- /.flex -->
-    <div class="flex">
-      <div class="g1-flex4 g2-flex6 g3-flex10 g3-offset1">
-        <p>
-          Vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum. deleniti atque
-          corrupti quos dolores. Et harum quidem rerm facilis est et expedita distinctio. Nam libero tempore, cum soluta
-          nobis est eligendi optio cumque nihil impedit quo minus id quod maxime. Vero eos et accusamus et iusto odio
-          dignissimos ducimus qui blanditiis praesentium voluptatum. deleniti atque corrupti quos dolores. Et harum
-          quidem rerm facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque
-          nihil impedit quo minus id quod maxime.
-        </p>
-      </div>
-    </div><!-- /.flex -->
-    <div class="flex">
-      <div class="g1-flex4 g2-flex6 g3-flex10 g3-offset1">
-        <div class="g1-flex4 g2-flex6 g3-flex6 flex-nested breakout push">
-          <p><img src="https://placehold.jp/3d4070/42598f/460x460.png" alt="skis"></p>
-        </div>
-        <h4>Expanding while keeping excellence the focus</h4>
-        <p>
-          Vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum. deleniti atque
-          corrupti quos dolores. Et harum quidem rerm facilis est et expedita distinctio. Nam libero tempore, cum soluta
-          nobis est eligendi optio cumque nihil impedit quo minus id quod maxime. Vero eos et accusamus et iusto odio
-          dignissimos ducimus qui blanditiis praesentium voluptatum. deleniti atque corrupti quos dolores. Et harum
-          quidem rerm facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque
-          nihil impedit quo minus id quod maxime.
-        </p>
-      </div>
-    </div><!-- /.flex -->
-    <div class="flex">
-      <blockquote class="blockquote">
-        <div class="flex">
-          <p>Our sales needed a major overhaul. Happy Lager took us into the 21st Century</p>
-          <footer>– <cite>Anthony Umlaut, Director of Marketing</cite></footer>
-        </div><!-- /.flex -->
-      </blockquote>
-    </div><!-- /.flex -->
-    <div class="flex">
-      <div class="g1-flex4 g2-flex6 g3-flex10 g3-offset1">
-        <h2 class="delta center subfont caps">Things We Learned</h2>
-      </div>
-    </div><!-- /.flex -->
-    <div class="flex">
-      <div class="g1-flex4 g2-flex6 g3-flex10 g3-offset1">
-        <p>
-          Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur
-          aut perferendis doloribus asperiores repellat. At vero eos et accusamus et iusto odio dignissimos ducimus qui
-          blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
-          occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est
-          laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.
-        </p>
-        <p>
-          Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur
-          aut perferendis doloribus asperiores repellat. At vero eos et accusamus et iusto odio dignissimos ducimus qui
-          blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
-          occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est
-          laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.
-        </p>
-        <p>
-          Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur
-          aut perferendis doloribus asperiores repellat. At vero eos et accusamus et iusto odio dignissimos ducimus qui
-          blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
-          occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est
-          laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.
-        </p>
-      </div>
-    </div><!-- /.flex -->
+    {# 「コンテンツヘッダー」モジュールを読み込み #}
+    {% include "_partials/content_header" %}
+    {# 「article 見出し」モジュールを読み込み #}
+    {% include "_partials/article_heading" %}
+    {# 「article 本文」モジュールを読み込み #}
+    {% include "_partials/article_body" %}
   </article><!-- /article -->
   <section>
     <div class="flex">

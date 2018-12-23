@@ -59,35 +59,10 @@
   </nav><!-- /.subnav -->
   <section>
     <article>
-      <header class="alt2">
-        <div class="flex">
-          <div class="g1-flex4 g2-flex6 g3-flex12">
-            <h1 class="alpha center reverse">Design</h1>
-          </div>
-        </div><!-- /.flex -->
-      </header><!-- /.alt2 -->
-      <div class="flex">
-        <blockquote class="blockquote">
-          <div class="flex">
-            <p>Good Design is Invisible</p>
-            <footer>– <cite>A smart designer</cite></footer>
-          </div>
-        </blockquote>
-      </div><!-- /.flex -->
-      <div class="flex">
-        <div class="g1-flex4 g2-flex6 g3-flex10 g3-offset1">
-          <h2 class="delta center subfont caps">Design based design</h2>
-        </div>
-      </div><!-- /.flex -->
-      <div class="flex">
-        <div class="g1-flex4 g2-flex6 g3-flex10 g3-offset1">
-          <p>
-            We've been developing them libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo
-            minus id quod maxime placeat facer possimus, omnis voluptas assumenda est, omnis dolor repellendus.
-            Temporibus autem quibusdam et aut officiis debitis aut rerum quod maxime placeat facernecessitatibus.
-          </p>
-        </div>
-      </div><!-- /.flex -->
+      {# 「コンテンツヘッダー」モジュールを読み込み #}
+      {% include "_partials/content_header" %}
+      {# 「article 本文」モジュールを読み込み #}
+      {% include "_partials/article_body" %}
     </article><!-- /article -->
   </section><!-- /section -->
   <section class="service-points">
