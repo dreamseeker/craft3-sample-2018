@@ -29,14 +29,14 @@
   <section class="info-hero alt" style="background-image: url('https://placehold.jp/3d4070/42598f/1280x274.png')">
     <div class="flex">
       <div class="g1-flex4 g2-flex6 g3-flex8 g3-offset2">
-        <h1 class="delta reverse center subfont">We set out with a simple goal: create the design and products that we
-          would like to see.</h1>
-        <div class="epsilon center reverse">
-          <p>We are a group of highly effective, passionate people ready to take your
-            product to the next level. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe
-            eveniet ut et voluptates repudiandae sint et molestiae non recusandae taque earum hic tenetur a sapiente
-            delectus ut aut reiciendis.</p>
-        </div>
+        {% if entry.heading %}
+          <h1 class="delta reverse center subfont">{{ entry.heading }}</h1>
+        {% endif %}
+        {% if entry.body %}
+          <div class="epsilon center reverse">
+            {{ entry.body | raw }}
+          </div>
+        {% endif %}
       </div>
     </div><!-- /.flex -->
   </section><!-- /.info-hero -->
