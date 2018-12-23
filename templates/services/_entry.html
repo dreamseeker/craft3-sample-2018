@@ -13,6 +13,9 @@
 {# 「コンテンツヘッダー」でメイン画像を出力しないためのフラグをセット #}
 {% set excludeContentHeaderImage = 1 %}
 
+{# 「サービス」セクションのエントリを取得 #}
+{% set serviceEntries = craft.entries.section('services').all() %}
+
 
 {# ------------------------------------------
 出力
@@ -26,36 +29,17 @@
     <div class="flex">
       <div class="g1-flex4 g2-flex6 g3-flex12">
         <ul>
-          <li>
-            <a href="../services/detail.html" class="subfont caps current">
-              Design
-            </a>
-          </li>
-          <li>
-            <a href="../services/detail.html" class="subfont caps">
-              Development
-            </a>
-          </li>
-          <li>
-            <a href="../services/detail.html" class="subfont caps">
-              Strategy
-            </a>
-          </li>
-          <li>
-            <a href="../services/detail.html" class="subfont caps">
-              App Development
-            </a>
-          </li>
-          <li>
-            <a href="../services/detail.html" class="subfont caps">
-              SEO
-            </a>
-          </li>
-          <li>
-            <a href="../services/detail.html" class="subfont caps">
-              Email Marketing
-            </a>
-          </li>
+          {# 「サービス」セクションのエントリ一覧 #}
+          {% for serviceEntry in serviceEntries %}
+            {# ループ中の「サービス」エントリ ID と現在のページのエントリ ID が同一なら true #}
+            {% set isCurrent = (serviceEntry.id == entry.id) %}
+
+            <li>
+              <a href="{{ serviceEntry.url }}" class="subfont caps{% if isCurrent %} current{% endif %}">
+                {{ serviceEntry.title }}
+              </a>
+            </li>
+          {% endfor %}
         </ul>
       </div>
     </div><!-- /.flex -->
