@@ -22,8 +22,8 @@
   </div><!-- /.flex -->
 </header><!-- /.alt2 -->
 
-{# 「メイン画像」がセットされている場合のみ出力 #}
-{% if image %}
+{# 「メイン画像」がセットされていて、かつ、excludeContentHeaderImage が未定義の場合のみ出力 #}
+{% if image and excludeContentHeaderImage is not defined %}
   <section>
     <img class="contain-media" src="{{ image.getUrl({ width: 1440, height: 360 }) }}" alt="{{ image.title }}">
   </section>
