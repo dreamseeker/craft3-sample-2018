@@ -10,6 +10,18 @@
 {# meta タイトル #}
 {% set metaTitle = entry.title ~ ' | ワークス' %}
 
+{# 前後ページを取得する際のパラメータをセット #}
+{% set params = {
+  section: 'work',
+  orderBy: 'title'
+} %}
+
+{# 前のページを取得 #}
+{% set prevEntry = entry.getPrev(params) %}
+
+{# 次のページを取得 #}
+{% set nextEntry = entry.getNext(params) %}
+
 
 {# ------------------------------------------
 出力
@@ -49,9 +61,16 @@
           </p>
           <hr class="horz-rule">
         </footer>
-        <a class="btn" href="../work/">Back to what's on tap</a>
+        <a class="btn" href="/work/">Back to what's on tap</a>
         <nav class="prev-next-entry">
-          <a href="../work/detail.html" class="pag-prev-link">Prev</a>
+          {# 前のページが存在する場合のみ出力 #}
+          {% if prevEntry %}
+            <a href="{{ prevEntry.url }}" class="pag-prev-link">Prev</a>
+          {% endif %}
+          {# 次のページが存在する場合のみ出力 #}
+          {% if nextEntry %}
+            <a href="{{ nextEntry.url }}" class="pag-next-link">Next</a>
+          {% endif %}
         </nav><!-- /.prev-next-entry -->
       </div>
     </div><!-- /.flex -->
