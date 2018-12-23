@@ -16,6 +16,9 @@
 {# 「サービス」セクションのエントリを取得 #}
 {% set serviceEntries = craft.entries.section('services').all() %}
 
+{# このエントリに関連づけられている「ワークス」セクションのエントリ1件を取得 #}
+{% set relatedWorksEntry = craft.entries.section('work').relatedTo(entry).one() %}
+
 
 {# ------------------------------------------
 出力
@@ -79,23 +82,34 @@
     </section><!-- /.service-points -->
   {% endif %}
 
-  <section class="services-work-entry">
-    <div style="background-image: url('https://placehold.jp/3d4070/42598f/1280x328.png')">
-      <div class="flex">
-        <div class="g1-flex4 g2-flex3 g3-flex6">
-          <a href="../work/detail.html">
-            <img src="https://placehold.jp/3d4070/42598f/440x328.png" alt="diva-bigimage">
-          </a>
-        </div>
-        <div class="g1-flex4 g2-flex3 g3-flex6">
-          <div class="summary-wrap">
-            <h2 class="callout-border"><a href="../work/detail.html">Diva!</a></h2>
-            <h3><a href="../work/detail.html">A Star Is Born</a></h3>
-            <p>Combining Music with Celebrity gossip has become the winning combination making DIVA! the most downloaded
-              app of 2013</p>
-            <p><a href="../work/detail.html" class="view-more hero-cta">View More</a></p>
+  {% if relatedWorksEntry %}
+    {# 「メイン画像」フィールドを取得 #}
+    {% set image = relatedWorksEntry.featuredImage.one() %}
+
+    <section class="services-work-entry">
+      {# 「画像」がセットされている場合のみ出力 #}
+      <div{% if image %} style="background-image: url('{{ image.url }}')"{% endif %}>
+        <div class="flex">
+          <div class="g1-flex4 g2-flex3 g3-flex6">
+            <a href="{{ relatedWorksEntry.url }}">
+              {# 「画像」がセットされている場合のみ出力 #}
+              {% if image %}
+                <img src="{{ image.url({ width: 440, height: 328 }) }}" alt="{{ image.title }}">
+              {% endif %}
+            </a>
           </div>
-        </div>
-      </div><!-- /.flex -->
-  </section><!-- /.services-work-entry -->
+          <div class="g1-flex4 g2-flex3 g3-flex6">
+            <div class="summary-wrap">
+              <h2 class="callout-border"><a href="{{ relatedWorksEntry.url }}">{{ relatedWorksEntry.title }}</a></h2>
+              <h3><a href="{{ relatedWorksEntry.url }}">{{ relatedWorksEntry.heading }}</a></h3>
+              {# 「小見出し」がセットされている場合のみ出力 #}
+              {% if relatedWorksEntry.subheading %}
+                <p>{{ relatedWorksEntry.subheading }}</p>
+              {% endif %}
+              <p><a href="{{ relatedWorksEntry.url }}" class="view-more hero-cta">View More</a></p>
+            </div>
+          </div>
+        </div><!-- /.flex -->
+    </section><!-- /.services-work-entry -->
+  {% endif %}
 {% endblock %}
