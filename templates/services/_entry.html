@@ -7,7 +7,109 @@
 {# ------------------------------------------
 変数など
 --------------------------------------------- #}
+{# meta タイトル #}
+{% set metaTitle = entry.title ~ ' | サービス' %}
+
+{# 「コンテンツヘッダー」でメイン画像を出力しないためのフラグをセット #}
+{% set excludeContentHeaderImage = 1 %}
+
+{# 「サービス」セクションのエントリを取得 #}
+{% set serviceEntries = craft.entries.section('services').all() %}
+
+{# このエントリに関連づけられている「ワークス」セクションのエントリ1件を取得 #}
+{% set relatedWorksEntry = craft.entries.section('work').relatedTo(entry).one() %}
+
 
 {# ------------------------------------------
 出力
 --------------------------------------------- #}
+{# ベースレイアウトを extends #}
+{% extends '_layout' %}
+
+{# main ブロック #}
+{% block main %}
+  <nav class="subnav">
+    <div class="flex">
+      <div class="g1-flex4 g2-flex6 g3-flex12">
+        <ul>
+          {# 「サービス」セクションのエントリ一覧 #}
+          {% for serviceEntry in serviceEntries %}
+            {# ループ中の「サービス」エントリ ID と現在のページのエントリ ID が同一なら true #}
+            {% set isCurrent = (serviceEntry.id == entry.id) %}
+
+            <li>
+              <a href="{{ serviceEntry.url }}" class="subfont caps{% if isCurrent %} current{% endif %}">
+                {{ serviceEntry.title }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div><!-- /.flex -->
+  </nav><!-- /.subnav -->
+  <section>
+    <article>
+      {# 「コンテンツヘッダー」モジュールを読み込み #}
+      {% include "_partials/content_header" %}
+      {# 「article 本文」モジュールを読み込み #}
+      {% include "_partials/article_body" %}
+    </article><!-- /article -->
+  </section><!-- /section -->
+
+  {# 「サービス本文」がセットされている場合のみ出力 #}
+  {% if entry.serviceBody | length %}
+    <section class="service-points">
+      {# ブロックのループ処理 #}
+      {% for block in entry.serviceBody.all() %}
+        {# 「メイン画像」フィールドを取得 #}
+        {% set image = block.image.one() %}
+
+        <div class="flex">
+          <div class="service-point">
+            <div class="g1-flex4 g2-flex3 g3-flex4">
+              <h4>{{ block.heading }}</h4>
+              {{ block.text | raw }}
+            </div>
+            <div class="g1-flex4 g2-flex3 g3-flex8">
+              {# 「画像」がセットされている場合のみ出力 #}
+              {% if image %}
+                <img src="{{ image.getUrl('medium') }}" alt="{{ image.title }}" />
+              {% endif %}
+            </div>
+          </div><!-- /.service-point -->
+        </div><!-- /.flex -->
+      {% endfor %}
+    </section><!-- /.service-points -->
+  {% endif %}
+
+  {% if relatedWorksEntry %}
+    {# 「メイン画像」フィールドを取得 #}
+    {% set image = relatedWorksEntry.featuredImage.one() %}
+
+    <section class="services-work-entry">
+      {# 「画像」がセットされている場合のみ出力 #}
+      <div{% if image %} style="background-image: url('{{ image.url }}')"{% endif %}>
+        <div class="flex">
+          <div class="g1-flex4 g2-flex3 g3-flex6">
+            <a href="{{ relatedWorksEntry.url }}">
+              {# 「画像」がセットされている場合のみ出力 #}
+              {% if image %}
+                <img src="{{ image.url({ width: 440, height: 328 }) }}" alt="{{ image.title }}">
+              {% endif %}
+            </a>
+          </div>
+          <div class="g1-flex4 g2-flex3 g3-flex6">
+            <div class="summary-wrap">
+              <h2 class="callout-border"><a href="{{ relatedWorksEntry.url }}">{{ relatedWorksEntry.title }}</a></h2>
+              <h3><a href="{{ relatedWorksEntry.url }}">{{ relatedWorksEntry.heading }}</a></h3>
+              {# 「小見出し」がセットされている場合のみ出力 #}
+              {% if relatedWorksEntry.subheading %}
+                <p>{{ relatedWorksEntry.subheading }}</p>
+              {% endif %}
+              <p><a href="{{ relatedWorksEntry.url }}" class="view-more hero-cta">View More</a></p>
+            </div>
+          </div>
+        </div><!-- /.flex -->
+    </section><!-- /.services-work-entry -->
+  {% endif %}
+{% endblock %}

@@ -130,7 +130,10 @@
 
       {# 「引用」ブロック #}
       {% case 'quote' %}
-        <blockquote class="blockquote">
+        {# 「位置」がフルで「背景色」が #000 でなければ、指定された HEX 値をセット #}
+        {% set bgColor = (position == 'full' and entry.backgroundColor != '#000000') ? entry.backgroundColor %}
+
+        <blockquote class="blockquote{% if bgColor %} reverse{% endif %}"{% if bgColor %} style="background-color: {{ bgColor }};"{% endif %}>
           <div class="flex">
             <p>{{ block.quote }}</p>
 

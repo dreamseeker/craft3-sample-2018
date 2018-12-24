@@ -10,6 +10,9 @@
 {# meta タイトル #}
 {% set metaTitle = '会社案内' %}
 
+{# 「ロケーション」セクションのエントリを取得 #}
+{% set locationEntries = craft.entries.section('locations').all() %}
+
 
 {# ------------------------------------------
 出力
@@ -19,4 +22,85 @@
 
 {# main ブロック #}
 {% block main %}
+  <header class="alt">
+    <div class="flex">
+      <div class="g1-flex4 g2-flex6 g3-flex12">
+        <h1 class="alpha center reverse">The Brewery</h1>
+      </div>
+    </div><!-- /.flex -->
+  </header><!-- /.alt -->
+  <section class="info-hero alt" style="background-image: url('https://placehold.jp/3d4070/42598f/1280x274.png')">
+    <div class="flex">
+      <div class="g1-flex4 g2-flex6 g3-flex8 g3-offset2">
+        {% if entry.heading %}
+          <h1 class="delta reverse center subfont">{{ entry.heading }}</h1>
+        {% endif %}
+        {% if entry.body %}
+          <div class="epsilon center reverse">
+            {{ entry.body | raw }}
+          </div>
+        {% endif %}
+      </div>
+    </div><!-- /.flex -->
+  </section><!-- /.info-hero -->
+
+  {# 「article 本文」モジュールを読み込み #}
+  {% include "_partials/article_body" %}
+
+  {# 「ロケーション」セクションのエントリ一覧 #}
+  {% for locationEntry in locationEntries %}
+    {# 「メイン画像」フィールドを取得 #}
+    {% set image = locationEntry.featuredImage.one() %}
+
+    <section class="alt2">
+      <div class="flex">
+        <div class="g1-flex4 g2-flex6 g3-flex5">
+          <h1 class="gamma subfont alt">{{ locationEntry.title }}</h1>
+
+          {# 「住所」がセットされている場合のみ出力 #}
+          {% if locationEntry.address %}
+            <p class="delta subfont caps address">{{ locationEntry.address | nl2br }}</p>
+          {% endif %}
+
+          {# 「お問い合わせ方法」がセットされている場合のみ出力 #}
+          {% if locationEntry.contactMethods | length %}
+            <dl class="inline">
+              {# ブロックのループ処理 #}
+              {% for block in locationEntry.contactMethods.all() %}
+                <dt>{{ block.label }}</dt>
+                <dd>{{ block.data }}</dd>
+              {% endfor %}
+            </dl>
+          {% endif %}
+
+          {# 「メールアドレス」または「住所」がセットされている場合のみ出力 #}
+          {% if locationEntry.email or locationEntry.address %}
+            <ul class="horz-list">
+              {# 「メールアドレス」がセットされている場合のみ出力 #}
+              {% if locationEntry.email %}
+                <li>
+                  <a href="mailto:{{ locationEntry.email }}" class="subfont caps email-us-btn">Email Us</a>
+                </li>
+              {% endif %}
+
+              {# 「住所」がセットされている場合のみ出力 #}
+              {% if locationEntry.address %}
+                {# 「住所」フィールドを利用した Google マップのリンク URL をセット #}
+                {% set googleMapsUrl = 'https://www.google.com/maps/search/' ~ locationEntry.address | replace("\n", ', ') | url_encode %}
+                <li>
+                  <a href="{{ googleMapsUrl }}" target="_blank" class="subfont caps map-btn">Map</a>
+                </li>
+              {% endif %}
+            </ul>
+          {% endif %}
+        </div>
+        <div class="g1-flex4 g2-flex6 g3-flex7">
+          {# 「画像」がセットされている場合のみ出力 #}
+          {% if image %}
+            <img src="{{ image.getUrl('medium') }}" alt="{{ image.title }}" />
+          {% endif %}
+        </div>
+      </div><!-- /.flex -->
+    </section><!-- /.alt2 -->
+  {% endfor %}
 {% endblock %}
