@@ -13,6 +13,9 @@
 {# 「ヒーロー画像」フィールドを取得 #}
 {% set heroImage = entry.heroImage.one() %}
 
+{# 「ワークス」セクションのエントリ最新3件を取得 #}
+{% set workEntries = craft.entries.section('work').limit(3).all() %}
+
 
 {# ------------------------------------------
 出力
@@ -49,16 +52,23 @@
     </div><!-- /.flex -->
     <div class="flex">
 
-      <div class="g1-flex4 g2-flex2 g3-flex4">
-        <a href="./work/detail.html" class="services-entry-wrap">
-          <img src="https://placehold.jp/3d4070/42598f/280x204.png" alt="image.title"/>
-          <h3 class="center">Sports R&#039; Us</h3>
-          <p>
-            New e-commerce experience for Sports R' Us
-          </p>
-        </a>
-      </div>
-      
+      {# 「ワークス」セクションのエントリ一覧 #}
+      {% for workEntry in workEntries %}
+        {# サムネイル画像」フィールドを取得 #}
+        {% set image = workEntry.featuredThumb.one() %}
+
+        <div class="g1-flex4 g2-flex2 g3-flex4">
+          <a href="{{ workEntry.url }}" class="services-entry-wrap">
+            {# 「サムネイル画像」がセットされている場合のみ出力 #}
+            {% if image %}
+              <img src="{{ image.getUrl('thumb') }}" alt="{{ image.title }}">
+            {% endif %}
+            <h3 class="center">{{ workEntry.title }}</h3>
+            {{ workEntry.shortDescription }}
+          </a>
+        </div>
+      {% endfor %}
+
     </div><!-- /.flex -->
   </section><!-- /#on-tap -->
   <section id="how-made">
