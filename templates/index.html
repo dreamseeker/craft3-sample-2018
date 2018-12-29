@@ -91,25 +91,28 @@
       </div>
     </div><!-- /.flex -->
   </section><!-- /#how-made -->
-  <section id="testimonials">
-    <div class="flex">
-      <div class="g1-flex4 g2-flex2 g3-flex4 bubble">
-        <blockquote>Happy Lager delivered the most comprehensive strategy from a boutique company that I’ve ever seen.</blockquote>
-        <img src="https://placehold.jp/3d4070/42598f/84x84.png" alt="Larry Page">
-        <p><cite class="gamma reverse">Larry Page</cite></p>
-      </div><!-- /.bubble -->
-      <div class="g1-flex4 g2-flex2 g3-flex4 bubble">
-        <blockquote>I don’t know where to begin. I can’t recommend Happy Lager highly enough.</blockquote>
-        <img src="https://placehold.jp/3d4070/42598f/84x84.png" alt="Ryan Reynolds">
-        <p><cite class="gamma reverse">Ryan Reynolds</cite></p>
-      </div><!-- /.bubble -->
-      <div class="g1-flex4 g2-flex2 g3-flex4 bubble">
-        <blockquote>Happy Lager sells the good stuff.</blockquote>
-        <img src="https://placehold.jp/3d4070/42598f/84x84.png" alt="Bob Guff">
-        <p><cite class="gamma reverse">Bob Guff</cite></p>
-      </div><!-- /.bubble -->
-    </div><!-- /.flex -->
-  </section><!-- /#testimonials -->
+
+  {# 「お客様の声」がセットされている場合のみ出力 #}
+  {% if entry.testimonials | length %}
+    <section id="testimonials">
+      <div class="flex">
+        {# ブロックのループ処理 #}
+        {% for block in entry.testimonials.all() %}
+          {# 「画像」フィールドを取得 #}
+          {% set image = block.photo.one() %}
+
+          <div class="g1-flex4 g2-flex2 g3-flex4 bubble">
+            <blockquote>{{ block.quote }}</blockquote>
+            {% if image %}
+              <img class="" src="{{ image.url({ width: 84, height: 84 }) }}" alt="{{ image.title }}">
+            {% endif %}
+            <p><cite class="gamma reverse">{{ block.cite }}</cite></p>
+          </div><!-- /.bubble -->
+        {% endfor %}
+      </div><!-- /.flex -->
+    </section><!-- /#testimonials -->
+  {% endif %}
+
   <section id="best-buddies">
     <div class="flex">
       <div class="g1-flex4 g2-flex6 g3-flex10 g3-offset1">
