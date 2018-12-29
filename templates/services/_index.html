@@ -10,6 +10,9 @@
 {# meta タイトル #}
 {% set metaTitle = 'サービス' %}
 
+{# 「サービス」セクションのエントリを取得 #}
+{% set serviceEntries = craft.entries.section('services').all() %}
+
 
 {# ------------------------------------------
 出力
@@ -19,9 +22,45 @@
 
 {# main ブロック #}
 {% block main %}
-  <ul>
-    {% for entry in craft.entries.section('services').all() %}
-      <li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
-    {% endfor %}
-  </ul>
+  <header class="alt2">
+    <div class="flex">
+      <div class="g1-flex4 g2-flex6 g3-flex12">
+        <h1 class="alpha center reverse">How It’s Made</h1>
+      </div>
+    </div><!-- /.flex -->
+  </header><!-- /.alt2 -->
+  <section class="alt">
+    <div class="flex">
+      <div class="g1-flex4 g2-flex6 g3-flex8 g3-offset2">
+        {# 「大見出し」がセットされている場合のみ出力 #}
+        {% if entry.heading %}
+          <h1 class="delta center subfont">{{ entry.heading }}</h1>
+        {% endif %}
+        {# 「本文」がセットされている場合のみ出力 #}
+        {% if entry.body %}
+          <div class="epsilon center">{{ entry.body }}</div>
+        {% endif %}
+      </div>
+    </div><!-- /.flex -->
+  </section><!-- /.alt -->
+  <section>
+    <div class="flex">
+      {# 「サービス」セクションのエントリ一覧 #}
+      {% for serviceEntry in serviceEntries %}
+        {# 「メイン画像」フィールドを取得 #}
+        {% set image = serviceEntry.featuredImage.one() %}
+
+        <div class="g1-flex4 g2-flex2 g3-flex4">
+          <a href="{{ serviceEntry.url }}" class="services-entry-wrap">
+            {# 「メイン画像」がセットされている場合のみ出力 #}
+            {% if image %}
+              <img src="{{ image.getUrl('thumb') }}" alt="{{ image.title }}"/>
+            {% endif %}
+            <h3 class="center">{{ serviceEntry.title }}</h3>
+            {{ serviceEntry.shortDescription }}
+          </a><!-- /.services-entry-wrap-->
+        </div>
+      {% endfor %}
+    </div><!-- /.flex -->
+  </section><!-- /section -->
 {% endblock %}

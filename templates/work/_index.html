@@ -10,6 +10,9 @@
 {# meta タイトル #}
 {% set metaTitle = 'ワークス' %}
 
+{# 「ワークス」セクションのエントリを取得 #}
+{% set workEntries = craft.entries.section('work').all() %}
+
 
 {# ------------------------------------------
 出力
@@ -19,9 +22,88 @@
 
 {# main ブロック #}
 {% block main %}
-  <ul>
-    {% for entry in craft.entries.section('work').all() %}
-      <li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
-    {% endfor %}
-  </ul>
+  <header class="alt2">
+    <div class="flex">
+      <div class="g1-flex4 g2-flex6 g3-flex12">
+        <h1 class="alpha center reverse">What’s On Tap</h1>
+      </div>
+    </div><!-- /.flex -->
+  </header><!-- /.alt2 -->
+  <section class="alt">
+    <div class="flex">
+      <div class="g1-flex4 g2-flex6 g3-flex8 g3-offset2">
+        {# 「大見出し」がセットされている場合のみ出力 #}
+        {% if entry.heading %}
+          <h1 class="delta center subfont">{{ entry.heading }}</h1>
+        {% endif %}
+        {# 「本文」がセットされている場合のみ出力 #}
+        {% if entry.body %}
+          <div class="epsilon center">{{ entry.body }}</div>
+        {% endif %}
+      </div>
+    </div><!-- /.flex -->
+  </section><!-- /.alt -->
+
+  {# 「ワークス」セクションのエントリ一覧 #}
+  {% for workEntry in workEntries %}
+    {# 「メイン画像」フィールドを取得 #}
+    {% set image = workEntry.featuredImage.one() %}
+
+    {% if loop.first %}
+      {# ループの最初のみ出力 #}
+      <article class="work-entry work-entry-feature">
+        {# 「メイン画像」がセットされている場合のみ出力 #}
+        {% if image %}
+          <img src="{{ image.getUrl({ width: 2000 }) }}" alt="{{ image.title }}" width="2000">
+        {% endif %}
+        <div class="summary-wrap">
+          {# 「大見出し」がセットされている場合のみ出力 #}
+          {% if workEntry.heading %}
+            <a href="{{ workEntry.url }}"><h2 class="center reverse beta">{{ workEntry.heading }}</h2></a>
+          {% endif %}
+
+          {# 「小見出し」がセットされている場合のみ出力 #}
+          {% if workEntry.subheading %}
+            <h3 class="delta center subfont reverse"><a href="{{ workEntry.url }}">{{ workEntry.subheading }}</a></h3>
+          {% endif %}
+
+          {# 「概要文」がセットされている場合のみ出力 #}
+          {% if workEntry.shortDescription %}
+            <div class="block text">
+              {{ workEntry.shortDescription }}
+            </div>
+          {% endif %}
+
+          <p class="center"><a href="{{ workEntry.url }}" class="more-link">Full Story</a></p>
+        </div><!-- /.summary-wrap -->
+      </article><!-- /.work-entry.work-entry-feature -->
+    {% else %}
+      {# ループのインデックス番号が2なら、コンテナ要素の開始タグを出力 #}
+      {% if loop.index == 2 %}
+        <div class="flex">
+      {% endif %}
+
+        {# ループの最初以外で出力 #}
+        <article class="work-entry">
+          {# 「メイン画像」がセットされている場合のみ出力 #}
+          {% if image %}
+            <figure>
+              <a href="{{ workEntry.url }}">
+                <img src="{{ image.getUrl({ width: 616 }) }}" alt="{{ image.title }}" width="616" height="204">
+              </a>
+            </figure>
+          {% endif %}
+          <div class="summary-wrap">
+            <h3><a href="{{ workEntry.url }}">{{ workEntry.title }}</a></h3>
+            {{ workEntry.shortDescription }}
+            <p><a href="{{ workEntry.url }}" class="more-link">Read More</a></p>
+          </div><!-- /.summary-wrap -->
+        </article><!-- /.work-entry -->
+
+      {# ループの最後なら、コンテナ要素の閉じタグを出力 #}
+      {% if loop.last %}
+        </div><!-- /.flex -->
+      {% endif %}
+    {% endif %}
+  {% endfor %}
 {% endblock %}

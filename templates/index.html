@@ -7,6 +7,18 @@
 {# ------------------------------------------
 変数など
 --------------------------------------------- #}
+{# body のクラス #}
+{% set bodyClass = 'homepage' %}
+
+{# 「ヒーロー画像」フィールドを取得 #}
+{% set heroImage = entry.heroImage.one() %}
+
+{# 「ワークス」セクションのエントリ最新3件を取得 #}
+{% set workEntries = craft.entries.section('work').limit(3).all() %}
+
+{# 「クライアントロゴ」フィールドを取得 #}
+{% set clientLogos = entry.clientLogos.all() %}
+
 
 {# ------------------------------------------
 出力
@@ -16,4 +28,114 @@
 
 {# main ブロック #}
 {% block main %}
+  <div id="hero">
+    {# 「ヒーロー画像」がセットされている場合のみ出力 #}
+    {% if heroImage %}
+      <img src="{{ heroImage.getUrl({ height: 916 }) }}" alt="{{ heroImage.title }}"/>
+    {% endif %}
+
+    <div class="hero-info">
+      <h1>We always see the glass<br>
+        <span class="ir">Half Full</span>
+      </h1>
+      <p class="center reverse">Work with Happy Lager and you will find an endless<br>
+        tap of ideas, wit and creativity.
+      </p>
+      <p class="center"><a href="mailto:hi@happylager.dev" class="hero-cta">Pull up a bar stool</a></p>
+    </div><!-- /.hero-info -->
+  </div><!-- /#hero -->
+  <section id="on-tap">
+    <div class="flex">
+      <div class="g1-flex4 g2-flex6 g3-flex12">
+        <div class="on-tap-buttons-wrap">
+          <a class="button-w-icon icon-beer" href="./work/">What’s on Tap</a>
+          <a href="./work/" class="view-more">View More</a>
+        </div>
+      </div>
+    </div><!-- /.flex -->
+    <div class="flex">
+
+      {# 「ワークス」セクションのエントリ一覧 #}
+      {% for workEntry in workEntries %}
+        {# サムネイル画像」フィールドを取得 #}
+        {% set image = workEntry.featuredThumb.one() %}
+
+        <div class="g1-flex4 g2-flex2 g3-flex4">
+          <a href="{{ workEntry.url }}" class="services-entry-wrap">
+            {# 「サムネイル画像」がセットされている場合のみ出力 #}
+            {% if image %}
+              <img src="{{ image.getUrl('thumb') }}" alt="{{ image.title }}">
+            {% endif %}
+            <h3 class="center">{{ workEntry.title }}</h3>
+            {{ workEntry.shortDescription }}
+          </a>
+        </div>
+      {% endfor %}
+
+    </div><!-- /.flex -->
+  </section><!-- /#on-tap -->
+  <section id="how-made">
+    <div class="flex">
+      <div class="g1-flex4 g2-flex6 g3-flex10 g3-offset1">
+        <hr class="horz-rule alt">
+        <a class="button-w-icon alt icon-beaker" href="./about/">How it’s made</a>
+      </div>
+    </div><!-- /.flex -->
+    <div class="flex">
+      <div class="g1-flex4 g2-flex6 g3-flex10 g3-offset1">
+        <h1 class="beta">Uncap Happy Lager to find out how it’s made</h1>
+        <h2 class="subfont delta center">Our Experience &middot; Our Services &middot; And more</h2>
+      </div>
+    </div><!-- /.flex -->
+    <div class="flex">
+      <div class="g1-flex4 g2-flex6 g3-flex10 g3-offset1">
+        <hr class="horz-rule alt2">
+        <a class="big-arrow" href="./about/">Go</a>
+      </div>
+    </div><!-- /.flex -->
+  </section><!-- /#how-made -->
+
+  {# 「お客様の声」がセットされている場合のみ出力 #}
+  {% if entry.testimonials | length %}
+    <section id="testimonials">
+      <div class="flex">
+        {# ブロックのループ処理 #}
+        {% for block in entry.testimonials.all() %}
+          {# 「画像」フィールドを取得 #}
+          {% set image = block.photo.one() %}
+
+          <div class="g1-flex4 g2-flex2 g3-flex4 bubble">
+            <blockquote>{{ block.quote }}</blockquote>
+            {% if image %}
+              <img class="" src="{{ image.url({ width: 84, height: 84 }) }}" alt="{{ image.title }}">
+            {% endif %}
+            <p><cite class="gamma reverse">{{ block.cite }}</cite></p>
+          </div><!-- /.bubble -->
+        {% endfor %}
+      </div><!-- /.flex -->
+    </section><!-- /#testimonials -->
+  {% endif %}
+
+  <section id="best-buddies">
+    <div class="flex">
+      <div class="g1-flex4 g2-flex6 g3-flex10 g3-offset1">
+        <hr class="horz-rule alt3">
+        <a class="button-w-icon alt2 icon-beercan">Our best Drinking Buddies</a>
+        <ul class="logos">
+          {# 「クライアントロゴ」フィールドのアセット一覧 #}
+          {% for clientLogo in clientLogos %}
+            <li>
+              <img src="{{ clientLogo.getUrl() }}" alt="{{ clientLogo.title }}"/>
+            </li>
+          {% endfor %}
+        </ul><!-- /.logos -->
+      </div>
+    </div><!-- /.flex -->
+    <div class="flex">
+      <div class="g1-flex4 g2-flex6 g3-flex10 g3-offset1">
+        <h1 class="beta center">Some Partners Make it all worth while</h1>
+        <h2 class="subfont delta center">Robin Richards &middot; President, Happy Lager</h2>
+      </div>
+    </div><!-- /.flex -->
+  </section><!-- /#best-buddies -->
 {% endblock %}
