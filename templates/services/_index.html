@@ -29,14 +29,14 @@
   <section class="alt">
     <div class="flex">
       <div class="g1-flex4 g2-flex6 g3-flex8 g3-offset2">
-        <h1 class="delta center subfont">From conception to perfection, we Craft each one of our digital products by
-          hand.</h1>
-        <div class="epsilon center">
-          <p>Some studios have a secret or complex process on how they create great work. Ours
-            is not a secret and it's very simple: <strong>Truth.</strong> Here at Happy Lager we believe that every
-            digital product we make speaks to the integrity of our craft. We want to use great products, <strong>so we
-              only create great products</strong>.</p>
-        </div>
+        {# 「大見出し」がセットされている場合のみ出力 #}
+        {% if entry.heading %}
+          <h1 class="delta center subfont">{{ entry.heading }}</h1>
+        {% endif %}
+        {# 「本文」がセットされている場合のみ出力 #}
+        {% if entry.body %}
+          <div class="epsilon center">{{ entry.body }}</div>
+        {% endif %}
       </div>
     </div><!-- /.flex -->
   </section><!-- /.alt -->
