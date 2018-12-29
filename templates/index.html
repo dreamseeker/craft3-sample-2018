@@ -10,6 +10,10 @@
 {# body のクラス #}
 {% set bodyClass = 'homepage' %}
 
+{# 「ヒーロー画像」フィールドを取得 #}
+{% set heroImage = entry.heroImage.one() %}
+
+
 {# ------------------------------------------
 出力
 --------------------------------------------- #}
@@ -19,6 +23,11 @@
 {# main ブロック #}
 {% block main %}
   <div id="hero">
+    {# 「ヒーロー画像」がセットされている場合のみ出力 #}
+    {% if heroImage %}
+      <img src="{{ heroImage.getUrl({ height: 916 }) }}" alt="{{ heroImage.title }}"/>
+    {% endif %}
+
     <img src="https://placehold.jp/3d4070/42598f/1280x800.png" alt="hero-image"/>
     <div class="hero-info">
       <h1>We always see the glass<br>
