@@ -16,6 +16,9 @@
 {# 「ワークス」セクションのエントリ最新3件を取得 #}
 {% set workEntries = craft.entries.section('work').limit(3).all() %}
 
+{# 「クライアントロゴ」フィールドを取得 #}
+{% set clientLogos = entry.clientLogos.all() %}
+
 
 {# ------------------------------------------
 出力
@@ -119,21 +122,12 @@
         <hr class="horz-rule alt3">
         <a class="button-w-icon alt2 icon-beercan">Our best Drinking Buddies</a>
         <ul class="logos">
-          <li>
-            <img src="https://placehold.jp/3d4070/42598f/148x68.png" alt="logo.title"/>
-          </li>
-          <li>
-            <img src="https://placehold.jp/3d4070/42598f/148x68.png" alt="logo.title"/>
-          </li>
-          <li>
-            <img src="https://placehold.jp/3d4070/42598f/148x68.png" alt="logo.title"/>
-          </li>
-          <li>
-            <img src="https://placehold.jp/3d4070/42598f/148x68.png" alt="logo.title"/>
-          </li>
-          <li>
-            <img src="https://placehold.jp/3d4070/42598f/148x68.png" alt="logo.title"/>
-          </li>
+          {# 「クライアントロゴ」フィールドのアセット一覧 #}
+          {% for clientLogo in clientLogos %}
+            <li>
+              <img src="{{ clientLogo.getUrl() }}" alt="{{ clientLogo.title }}"/>
+            </li>
+          {% endfor %}
         </ul><!-- /.logos -->
       </div>
     </div><!-- /.flex -->
