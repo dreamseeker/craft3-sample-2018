@@ -19,9 +19,71 @@
 
 {# main ブロック #}
 {% block main %}
-  <ul>
-    {% for entry in craft.entries.section('services').all() %}
-      <li><a href="{{ entry.url }}">{{ entry.title }}</a></li>
-    {% endfor %}
-  </ul>
+  <header class="alt2">
+    <div class="flex">
+      <div class="g1-flex4 g2-flex6 g3-flex12">
+        <h1 class="alpha center reverse">How It’s Made</h1>
+      </div>
+    </div><!-- /.flex -->
+  </header><!-- /.alt2 -->
+  <section class="alt">
+    <div class="flex">
+      <div class="g1-flex4 g2-flex6 g3-flex8 g3-offset2">
+        <h1 class="delta center subfont">From conception to perfection, we Craft each one of our digital products by
+          hand.</h1>
+        <div class="epsilon center">
+          <p>Some studios have a secret or complex process on how they create great work. Ours
+            is not a secret and it's very simple: <strong>Truth.</strong> Here at Happy Lager we believe that every
+            digital product we make speaks to the integrity of our craft. We want to use great products, <strong>so we
+              only create great products</strong>.</p>
+        </div>
+      </div>
+    </div><!-- /.flex -->
+  </section><!-- /.alt -->
+  <section>
+    <div class="flex">
+      <div class="g1-flex4 g2-flex2 g3-flex4">
+        <a href="../services/detail.html" class="services-entry-wrap">
+          <img src="https://placehold.jp/3d4070/42598f/280x204.png" alt="news-link-2-image"/>
+          <h3 class="center">Design</h3>
+          <p>We're a close-knit team of agile thinkers ready to create.</p>
+        </a><!-- /.services-entry-wrap-->
+      </div>
+      <div class="g1-flex4 g2-flex2 g3-flex4">
+        <a href="../services/detail.html" class="services-entry-wrap">
+          <img src="https://placehold.jp/3d4070/42598f/280x204.png" alt="development"/>
+          <h3 class="center">Development</h3>
+          <p>Our development is strong, tight and clean.</p>
+        </a><!-- /.services-entry-wrap-->
+      </div>
+      <div class="g1-flex4 g2-flex2 g3-flex4">
+        <a href="../services/detail.html" class="services-entry-wrap">
+          <img src="https://placehold.jp/3d4070/42598f/280x204.png" alt="strategy"/>
+          <h3 class="center">Strategy</h3>
+          <p>We love it when a plan comes together.</p>
+        </a><!-- /.services-entry-wrap-->
+      </div>
+      <div class="g1-flex4 g2-flex2 g3-flex4">
+        <a href="../services/detail.html" class="services-entry-wrap">
+          <img src="https://placehold.jp/3d4070/42598f/280x204.png" alt="app-development"/>
+          <h3 class="center">App Development</h3>
+          <p>Our apps are as good as our taste buds.</p>
+        </a><!-- /.services-entry-wrap-->
+      </div>
+      <div class="g1-flex4 g2-flex2 g3-flex4">
+        <a href="../services/detail.html" class="services-entry-wrap">
+          <img src="https://placehold.jp/3d4070/42598f/280x204.png" alt="seo"/>
+          <h3 class="center">SEO</h3>
+          <p>We optimize everything we do so your audience can find you.</p>
+        </a><!-- /.services-entry-wrap-->
+      </div>
+      <div class="g1-flex4 g2-flex2 g3-flex4">
+        <a href="../services/detail.html" class="services-entry-wrap">
+          <img src="https://placehold.jp/3d4070/42598f/280x204.png" alt="email-marketing"/>
+          <h3 class="center">Email Marketing</h3>
+          <p>Stay connected in an ever changing world.</p>
+        </a><!-- /.services-entry-wrap-->
+      </div>
+    </div><!-- /.flex -->
+  </section><!-- /section -->
 {% endblock %}
