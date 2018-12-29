@@ -29,11 +29,14 @@
   <section class="alt">
     <div class="flex">
       <div class="g1-flex4 g2-flex6 g3-flex8 g3-offset2">
-        <h1 class="delta center subfont">Every digital product has a story to tell. It’s our job to find it and tell it
-          well.</h1>
-        <div class="epsilon center"><p>While we were not meaning to rhyme, this statement holds true. The end goal is to
-            connect with humans, and we use the basic principles of story to do just that. Browse our work, enjoy the
-            visuals and discover what it takes to create something great.</p></div>
+        {# 「大見出し」がセットされている場合のみ出力 #}
+        {% if entry.heading %}
+          <h1 class="delta center subfont">{{ entry.heading }}</h1>
+        {% endif %}
+        {# 「本文」がセットされている場合のみ出力 #}
+        {% if entry.body %}
+          <div class="epsilon center">{{ entry.body }}</div>
+        {% endif %}
       </div>
     </div><!-- /.flex -->
   </section><!-- /.alt -->
