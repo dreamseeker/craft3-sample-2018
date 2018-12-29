@@ -10,6 +10,9 @@
 {# meta タイトル #}
 {% set metaTitle = 'サービス' %}
 
+{# 「サービス」セクションのエントリを取得 #}
+{% set serviceEntries = craft.entries.section('services').all() %}
+
 
 {# ------------------------------------------
 出力
@@ -42,15 +45,22 @@
   </section><!-- /.alt -->
   <section>
     <div class="flex">
+      {# 「サービス」セクションのエントリ一覧 #}
+      {% for serviceEntry in serviceEntries %}
+        {# 「メイン画像」フィールドを取得 #}
+        {% set image = serviceEntry.featuredImage.one() %}
 
-      <div class="g1-flex4 g2-flex2 g3-flex4">
-        <a href="../services/detail.html" class="services-entry-wrap">
-          <img src="https://placehold.jp/3d4070/42598f/280x204.png" alt="news-link-2-image"/>
-          <h3 class="center">Design</h3>
-          <p>We're a close-knit team of agile thinkers ready to create.</p>
-        </a><!-- /.services-entry-wrap-->
-      </div>
-
+        <div class="g1-flex4 g2-flex2 g3-flex4">
+          <a href="{{ serviceEntry.url }}" class="services-entry-wrap">
+            {# 「メイン画像」がセットされている場合のみ出力 #}
+            {% if image %}
+              <img src="{{ image.getUrl('thumb') }}" alt="{{ image.title }}"/>
+            {% endif %}
+            <h3 class="center">{{ serviceEntry.title }}</h3>
+            {{ serviceEntry.shortDescription }}
+          </a><!-- /.services-entry-wrap-->
+        </div>
+      {% endfor %}
     </div><!-- /.flex -->
   </section><!-- /section -->
 {% endblock %}
